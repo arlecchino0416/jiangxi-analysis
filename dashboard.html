@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>江西厂1-5月运营分析看板</title>
+<script src="./lib/chart.umd.js"></script>
+<script src="./lib/chartjs-plugin-datalabels.min.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f0f2f5; color:#333; }
+.header { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); color:#fff; padding:28px 16px; text-align:center; }
+.header h1 { font-size:28px; letter-spacing:4px; margin-bottom:6px; }
+.header .subtitle { font-size:14px; opacity:.7; }
+.header .stats-row { display:flex; justify-content:center; gap:24px; margin-top:16px; flex-wrap:wrap; }
+.header .stat-item { text-align:center; min-width:80px; }
+.header .stat-value { font-size:22px; font-weight:700; }
+.header .stat-label { font-size:11px; opacity:.6; margin-top:2px; }
+.nav { display:flex; background:#fff; border-bottom:1px solid #e8e8e8; position:sticky; top:0; z-index:100; overflow-x:auto; }
+.nav a { padding:12px 20px; text-decoration:none; color:#666; font-size:14px; white-space:nowrap; border-bottom:3px solid transparent; transition:all .2s; }
+.nav a:hover { color:#0f3460; background:#f5f7fa; }
+.nav a.active { color:#0f3460; border-bottom-color:#0f3460; font-weight:600; }
+.container { max-width:1400px; margin:0 auto; padding:20px 16px; }
+.section { display:none; }
+.section.active { display:block; animation:fadeIn .3s; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+.section-title { font-size:20px; font-weight:600; margin:24px 0 16px; padding-left:12px; border-left:4px solid #0f3460; }
+.section-desc { font-size:13px; color:#888; margin-bottom:16px; padding-left:16px; }
+.card { background:#fff; border-radius:10px; padding:20px; margin-bottom:20px; box-shadow:0 1px 4px rgba(0,0,0,.06); transition:box-shadow .2s; }
+.card:hover { box-shadow:0 4px 16px rgba(0,0,0,.1); }
+.card h3 { font-size:15px; font-weight:600; margin-bottom:12px; color:#1a1a2e; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+.grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+@media(max-width:900px){ .grid-2,.grid-3,.grid-4{grid-template-columns:1fr} }
+.kpi-card { background:#fff; border-radius:10px; padding:18px; box-shadow:0 1px 4px rgba(0,0,0,.06); text-align:center; cursor:pointer; transition:all .2s; border-left:4px solid #0f3460; }
+.kpi-card:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,.1); }
+.kpi-card .kpi-value { font-size:28px; font-weight:700; color:#0f3460; }
+.kpi-card .kpi-label { font-size:12px; color:#888; margin-top:4px; }
+.kpi-card .kpi-trend { font-size:12px; margin-top:4px; font-weight:600; }
+.kpi-card .kpi-trend.up { color:#e74c3c; }
+.kpi-card .kpi-trend.down { color:#27ae60; }
+.kpi-card.success { border-left-color:#27ae60; } .kpi-card.success .kpi-value{color:#27ae60}
+.kpi-card.danger { border-left-color:#e74c3c; } .kpi-card.danger .kpi-value{color:#e74c3c}
+.kpi-card.warning { border-left-color:#f39c12; } .kpi-card.warning .kpi-value{color:#f39c12}
+.kpi-card.info { border-left-color:#3498db; } .kpi-card.info .kpi-value{color:#3498db}
+.chart-container { position:relative; height:300px; }
+.chart-container.tall { height:400px; }
+.filter-bar { display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; align-items:center; }
+.filter-bar select, .filter-bar button { padding:6px 14px; border:1px solid #d9d9d9; border-radius:6px; font-size:13px; background:#fff; cursor:pointer; }
+.filter-bar select:focus { border-color:#0f3460; outline:none; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+table th { background:#f5f7fa; padding:10px 12px; text-align:left; font-weight:600; color:#555; border-bottom:2px solid #e8e8e8; position:sticky; top:0; z-index:1; }
+table td { padding:9px 12px; border-bottom:1px solid #f0f0f0; }
+table tr:hover td { background:#f0f4ff; }
+.rate-good { color:#27ae60; font-weight:600; }
+.rate-mid { color:#f39c12; font-weight:600; }
+.rate-bad { color:#e74c3c; font-weight:600; }
+.err-high { color:#e74c3c; font-weight:700; }
+.err-mid { color:#f39c12; font-weight:600; }
+.insight-box { background:#eef2ff; border-left:4px solid #4f6ef7; border-radius:6px; padding:14px 18px; margin:12px 0; font-size:14px; line-height:1.7; }
+.insight-box.warning { background:#fff8e1; border-left-color:#f39c12; }
+.insight-box.danger { background:#ffeaea; border-left-color:#e74c3c; }
+.insight-box.success { background:#e8f8e8; border-left-color:#27ae60; }
+.scroll-x { overflow-x:auto; }
+.table-wrap { max-height:480px; overflow-y:auto; border:1px solid #eee; border-radius:6px; }
+
+/* Boss 汇总表 */
+.boss-table { width:100%; border-collapse:separate; border-spacing:0; font-size:14px; min-width:600px; }
+.boss-table th { background:#0f3460; color:#fff; padding:12px 14px; text-align:center; font-weight:600; }
+.boss-table th:first-child { border-radius:8px 0 0 0; text-align:left; padding-left:18px; }
+.boss-table th:last-child { border-radius:0 8px 0 0; }
+.boss-table td { background:#fff; padding:10px 14px; text-align:center; border-bottom:1px solid #f0f0f0; font-size:14px; }
+.boss-table td:first-child { text-align:left; padding-left:18px; font-weight:600; color:#1a1a2e; }
+.boss-table tr:last-child td:first-child { border-radius:0 0 0 8px; }
+.boss-table tr:last-child td:last-child { border-radius:0 0 8px 0; }
+.boss-table .sum-row td { background:#eef2ff; font-weight:700; border-top:2px solid #0f3460; }
+.boss-cell-bad { color:#e74c3c; font-weight:700; }
+.boss-cell-good { color:#27ae60; font-weight:700; }
+
+/* 热力图 */
+.heatmap-wrap { overflow-x:auto; }
+.heatmap-table { width:100%; border-collapse:collapse; font-size:12px; min-width:900px; }
+.heatmap-table th, .heatmap-table td { text-align:center; padding:6px 4px; border:1px solid #e0e0e0; }
+.heatmap-table thead th { background:#f5f7fa; font-weight:600; color:#555; position:sticky; top:0; z-index:2; font-size:12px; }
+.heatmap-table thead th:first-child { min-width:100px; text-align:left; padding-left:8px; }
+.heatmap-table tbody td:first-child { text-align:left; padding-left:8px; font-weight:500; font-size:12px; min-width:100px; }
+.heatmap-table tbody td.val-cell { width:70px; min-width:60px; cursor:pointer; transition:all .15s; font-size:12px; }
+.heatmap-table tbody td.val-cell:hover { transform:scale(1.06); box-shadow:0 2px 8px rgba(0,0,0,.15); }
+.heatmap-table .fix-col { text-align:left; font-size:11px; color:#555; line-height:1.4; min-width:180px; padding-left:8px; background:#fafbfc; }
+
+/* 人员卡片 */
+.person-card { background:#fff; border-radius:8px; padding:14px 16px; border:1px solid #eee; transition:all .15s; }
+.person-card:hover { box-shadow:0 2px 8px rgba(0,0,0,.06); border-color:#ccc; }
+.person-card .pc-name { font-size:15px; font-weight:600; }
+.person-card .pc-region { font-size:11px; color:#888; }
+.person-card .pc-count { font-size:22px; font-weight:700; }
+.person-card .pc-list { font-size:12px; color:#555; line-height:1.6; margin-top:6px; }
+.person-card .pc-item { display:inline-block; background:#f5f5f5; padding:2px 8px; border-radius:4px; margin:2px 2px; font-size:11px; white-space:nowrap; }
+.person-card .pc-action { font-size:12px; margin-top:6px; padding:6px 8px; border-radius:4px; line-height:1.5; }
+.month-btn { padding:5px 14px; border:1px solid #d9d9d9; border-radius:6px; background:#fff; cursor:pointer; font-size:13px; transition:all .2s; }
+.month-btn:hover { border-color:#0f3460; }
+.month-btn.active { background:#0f3460; color:#fff; border-color:#0f3460; }
+#scrollTop { position:fixed; bottom:30px; right:30px; width:40px; height:40px; border-radius:50%; background:#0f3460; color:#fff; border:none; font-size:18px; cursor:pointer; display:none; box-shadow:0 2px 8px rgba(0,0,0,.2); z-index:99; }
+#scrollTop:hover { background:#16213e; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📊 江西厂运营分析报告</h1>
+  <div class="subtitle">2026年1月-5月 | RED项目 门店检查数据</div>
+  <div class="stats-row" id="headerStats"></div>
+</div>
+
+<div class="nav">
+  <a href="#overview" class="active" data-section="overview">📈 总览</a>
+  <a href="#completion" data-section="completion">✅ 完成情况</a>
+  <a href="#abnormal" data-section="abnormal">⚠️ 异常分析</a>
+  <a href="#person-abnormal" data-section="person-abnormal">👤 人员异常</a>
+  <a href="#errors" data-section="errors">❌ 人员错误</a>
+  <a href="#fix" data-section="fix">🔧 整改建议</a>
+</div>
+
+<div class="container">
+
+<!-- 总览 -->
+<div class="section active" id="section-overview">
+  <h2 class="section-title">📈 总体概览</h2>
+  <div class="grid-4" id="kpiCards"></div>
+  <div class="card">
+    <h3>📊 月度运营汇总</h3>
+    <div class="scroll-x" id="bossSummaryTable"></div>
+  </div>
+  <div class="grid-2">
+    <div class="card"><h3>📈 完成率 & 异常率趋势</h3><div class="chart-container"><canvas id="ovTrendChart"></canvas></div></div>
+    <div class="card"><h3>🏢 各区域完成率</h3><div class="filter-bar"><select id="ovRegionMonth"><option value="all">月度趋势</option><option value="1月">1月</option><option value="2月">2月</option><option value="3月">3月</option><option value="4月">4月</option><option value="5月">5月</option></select></div><div class="chart-container"><canvas id="ovRegionChart"></canvas></div></div>
+  </div>
+  <div class="card"><h3>🔍 核心发现</h3><div class="insight-box" id="overviewInsight"></div></div>
+</div>
+
+<!-- 完成情况 -->
+<div class="section" id="section-completion">
+  <h2 class="section-title">✅ 完成情况</h2>
+  <div class="grid-2">
+    <div class="card"><h3>📊 月度完成率 & 异常率</h3><div class="chart-container"><canvas id="compRateChart"></canvas></div></div>
+    <div class="card"><h3>📊 月度拜访量明细</h3><div class="chart-container"><canvas id="compVolChart"></canvas></div></div>
+  </div>
+  <div class="card"><h3>🏢 各区域月度完成率</h3><div class="chart-container tall"><canvas id="compRegionChart"></canvas></div></div>
+  <div class="card">
+    <h3>👤 人员绩效排名（含错误数）</h3>
+    <div class="filter-bar">
+      <span>月份：</span>
+      <div class="month-selector" id="personMonthSelector" style="display:inline-flex;gap:4px;"></div>
+      <span style="margin-left:8px;">排序：</span>
+      <select id="personSort"><option value="total">拜访量</option><option value="success_rate">成功率↓</option><option value="total_errors">错误数↓</option><option value="abnormal_rate">异常率↓</option></select>
+    </div>
+    <div class="scroll-x table-wrap"><table id="personTable"><thead><tr><th>#</th><th>姓名</th><th>区域</th><th>拜访量</th><th>成功</th><th>失败</th><th>成功率</th><th>异常率</th><th>错误数</th></tr></thead><tbody></tbody></table></div>
+  </div>
+</div>
+
+<!-- 异常分析 -->
+<div class="section" id="section-abnormal">
+  <h2 class="section-title">⚠️ 异常分析</h2>
+  <p class="section-desc">异常即失败——失败门店即为异常门店。下方热力图展示各异常原因在各月的发生次数及占比，并附整改计划。</p>
+  <div class="grid-2">
+    <div class="card"><h3>📈 异常率月度趋势</h3><div class="chart-container"><canvas id="abTrendChart"></canvas></div></div>
+    <div class="card"><h3>🏢 各区域异常率</h3><div class="chart-container"><canvas id="abRegionChart"></canvas></div></div>
+  </div>
+  <div class="card">
+    <h3>🔥 异常原因月度分布及整改计划</h3>
+    <div class="scroll-x" id="abnormalHeatmapWrap"></div>
+  </div>
+  <div class="insight-box warning" id="abnormalInsight"></div>
+</div>
+
+<!-- 人员异常 -->
+<div class="section" id="section-person-abnormal">
+  <h2 class="section-title">👤 人员异常分析及处理建议</h2>
+  <p class="section-desc">每位检查员的异常门店情况，含具体问题和处理方案。</p>
+  <div class="filter-bar">
+    <span>月份：</span>
+    <div class="month-selector" id="paMonthSelector" style="display:inline-flex;gap:4px;"></div>
+    <span style="margin-left:8px;">排序：</span>
+    <select id="paSort"><option value="abnormal">异常数↓</option><option value="name">姓名</option></select>
+    <span style="margin-left:8px;">区域：</span>
+    <select id="paRegion"><option value="all">全部</option><option value="南昌大区">南昌大区</option><option value="赣州大区">赣州大区</option><option value="上饶大区">上饶大区</option><option value="宜春大区">宜春大区</option></select>
+  </div>
+  <div class="grid-2" id="personAbnormalCards"></div>
+  <div class="insight-box" id="personAbnormalInsight"></div>
+</div>
+
+<!-- 人员错误 -->
+<div class="section" id="section-errors">
+  <h2 class="section-title">❌ 抽检错误 — 按人员分析</h2>
+  <p class="section-desc">每位检查员的抽检错误明细。</p>
+  <div class="filter-bar">
+    <span>月份：</span>
+    <div class="month-selector" id="errPersonMonthSelector" style="display:inline-flex;gap:4px;"></div>
+    <span style="margin-left:8px;">排序：</span>
+    <select id="errPersonSort"><option value="total_errors">错误次数↓</option><option value="name">姓名</option></select>
+    <span style="margin-left:8px;">区域：</span>
+    <select id="errPersonRegion"><option value="all">全部</option><option value="南昌大区">南昌大区</option><option value="赣州大区">赣州大区</option><option value="上饶大区">上饶大区</option><option value="宜春大区">宜春大区</option></select>
+  </div>
+  <div class="grid-2" id="personErrorCards"></div>
+  <div class="insight-box danger" id="errorInsight"></div>
+</div>
+
+<!-- 整改建议 -->
+<div class="section" id="section-fix">
+  <h2 class="section-title">🔧 整改建议</h2>
+  <p class="section-desc">基于1-5月数据，按问题严重程度排序的详细整改方案。</p>
+  <div id="recommendations"></div>
+</div>
+
+</div>
+
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="./dashboard.js"></script>
+
+</body>
+</html>
