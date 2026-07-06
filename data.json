@@ -1,0 +1,5387 @@
+{
+  "monthly": {
+    "1月": {
+      "total": 22659,
+      "success": 20518,
+      "failed": 2129,
+      "abnormal": 2092,
+      "erfang": 12,
+      "success_rate": 90.6,
+      "fail_rate": 9.4,
+      "abnormal_rate": 9.2
+    },
+    "2月": {
+      "total": 22046,
+      "success": 18897,
+      "failed": 3141,
+      "abnormal": 3149,
+      "erfang": 8,
+      "success_rate": 85.7,
+      "fail_rate": 14.2,
+      "abnormal_rate": 14.3
+    },
+    "3月": {
+      "total": 23300,
+      "success": 21059,
+      "failed": 2211,
+      "abnormal": 2241,
+      "erfang": 30,
+      "success_rate": 90.4,
+      "fail_rate": 9.5,
+      "abnormal_rate": 9.6
+    },
+    "4月": {
+      "total": 23456,
+      "success": 21077,
+      "failed": 2361,
+      "abnormal": 2379,
+      "erfang": 18,
+      "success_rate": 89.9,
+      "fail_rate": 10.1,
+      "abnormal_rate": 10.1
+    },
+    "5月": {
+      "total": 23019,
+      "success": 20581,
+      "failed": 2401,
+      "abnormal": 2438,
+      "erfang": 37,
+      "success_rate": 89.4,
+      "fail_rate": 10.4,
+      "abnormal_rate": 10.6
+    }
+  },
+  "regions": {
+    "1月": [
+      {
+        "name": "上饶大区",
+        "total": 5180,
+        "success": 4574,
+        "failed": 606,
+        "abnormal": 587,
+        "success_rate": 88.3,
+        "fail_rate": 11.7,
+        "abnormal_rate": 11.3
+      },
+      {
+        "name": "南昌大区",
+        "total": 7209,
+        "success": 6417,
+        "failed": 783,
+        "abnormal": 779,
+        "success_rate": 89.0,
+        "fail_rate": 10.9,
+        "abnormal_rate": 10.8
+      },
+      {
+        "name": "宜春大区",
+        "total": 4065,
+        "success": 3761,
+        "failed": 304,
+        "abnormal": 295,
+        "success_rate": 92.5,
+        "fail_rate": 7.5,
+        "abnormal_rate": 7.3
+      },
+      {
+        "name": "赣州大区",
+        "total": 6205,
+        "success": 5766,
+        "failed": 436,
+        "abnormal": 431,
+        "success_rate": 92.9,
+        "fail_rate": 7.0,
+        "abnormal_rate": 6.9
+      }
+    ],
+    "2月": [
+      {
+        "name": "上饶大区",
+        "total": 5446,
+        "success": 4497,
+        "failed": 949,
+        "abnormal": 949,
+        "success_rate": 82.6,
+        "fail_rate": 17.4,
+        "abnormal_rate": 17.4
+      },
+      {
+        "name": "南昌大区",
+        "total": 7651,
+        "success": 6473,
+        "failed": 1178,
+        "abnormal": 1178,
+        "success_rate": 84.6,
+        "fail_rate": 15.4,
+        "abnormal_rate": 15.4
+      },
+      {
+        "name": "宜春大区",
+        "total": 3767,
+        "success": 3369,
+        "failed": 393,
+        "abnormal": 398,
+        "success_rate": 89.4,
+        "fail_rate": 10.4,
+        "abnormal_rate": 10.6
+      },
+      {
+        "name": "赣州大区",
+        "total": 5182,
+        "success": 4558,
+        "failed": 621,
+        "abnormal": 624,
+        "success_rate": 88.0,
+        "fail_rate": 12.0,
+        "abnormal_rate": 12.0
+      }
+    ],
+    "3月": [
+      {
+        "name": "上饶大区",
+        "total": 5420,
+        "success": 4654,
+        "failed": 764,
+        "abnormal": 766,
+        "success_rate": 85.9,
+        "fail_rate": 14.1,
+        "abnormal_rate": 14.1
+      },
+      {
+        "name": "南昌大区",
+        "total": 7745,
+        "success": 7012,
+        "failed": 718,
+        "abnormal": 733,
+        "success_rate": 90.5,
+        "fail_rate": 9.3,
+        "abnormal_rate": 9.5
+      },
+      {
+        "name": "宜春大区",
+        "total": 4189,
+        "success": 3856,
+        "failed": 324,
+        "abnormal": 333,
+        "success_rate": 92.1,
+        "fail_rate": 7.7,
+        "abnormal_rate": 7.9
+      },
+      {
+        "name": "赣州大区",
+        "total": 5946,
+        "success": 5537,
+        "failed": 405,
+        "abnormal": 409,
+        "success_rate": 93.1,
+        "fail_rate": 6.8,
+        "abnormal_rate": 6.9
+      }
+    ],
+    "4月": [
+      {
+        "name": "上饶大区",
+        "total": 5777,
+        "success": 5058,
+        "failed": 719,
+        "abnormal": 719,
+        "success_rate": 87.6,
+        "fail_rate": 12.4,
+        "abnormal_rate": 12.4
+      },
+      {
+        "name": "南昌大区",
+        "total": 8452,
+        "success": 7469,
+        "failed": 970,
+        "abnormal": 983,
+        "success_rate": 88.4,
+        "fail_rate": 11.5,
+        "abnormal_rate": 11.6
+      },
+      {
+        "name": "宜春大区",
+        "total": 4079,
+        "success": 3755,
+        "failed": 320,
+        "abnormal": 324,
+        "success_rate": 92.1,
+        "fail_rate": 7.8,
+        "abnormal_rate": 7.9
+      },
+      {
+        "name": "赣州大区",
+        "total": 5148,
+        "success": 4795,
+        "failed": 352,
+        "abnormal": 353,
+        "success_rate": 93.1,
+        "fail_rate": 6.8,
+        "abnormal_rate": 6.9
+      }
+    ],
+    "5月": [
+      {
+        "name": "上饶大区",
+        "total": 5669,
+        "success": 5004,
+        "failed": 654,
+        "abnormal": 665,
+        "success_rate": 88.3,
+        "fail_rate": 11.5,
+        "abnormal_rate": 11.7
+      },
+      {
+        "name": "南昌大区",
+        "total": 8123,
+        "success": 7177,
+        "failed": 931,
+        "abnormal": 946,
+        "success_rate": 88.4,
+        "fail_rate": 11.5,
+        "abnormal_rate": 11.6
+      },
+      {
+        "name": "宜春大区",
+        "total": 4261,
+        "success": 3892,
+        "failed": 358,
+        "abnormal": 369,
+        "success_rate": 91.3,
+        "fail_rate": 8.4,
+        "abnormal_rate": 8.7
+      },
+      {
+        "name": "赣州大区",
+        "total": 4966,
+        "success": 4508,
+        "failed": 458,
+        "abnormal": 458,
+        "success_rate": 90.8,
+        "fail_rate": 9.2,
+        "abnormal_rate": 9.2
+      }
+    ]
+  },
+  "abnormal_reasons": {
+    "1月": [
+      {
+        "reason": "锁门/临时关门",
+        "count": 1216
+      },
+      {
+        "reason": "特殊场所（学校/部队等）无法进入",
+        "count": 313
+      },
+      {
+        "reason": "倒闭/停业",
+        "count": 197
+      },
+      {
+        "reason": "客户拒访，未采集",
+        "count": 143
+      },
+      {
+        "reason": "其他原因（若选此项，需备注具体原因）",
+        "count": 76
+      },
+      {
+        "reason": "门店装修",
+        "count": 49
+      },
+      {
+        "reason": "根据地址找不到客户/拆迁",
+        "count": 45
+      },
+      {
+        "reason": "距离太远",
+        "count": 32
+      },
+      {
+        "reason": "季节性不售卖饮料",
+        "count": 14
+      },
+      {
+        "reason": "其他原因（若选此项，要备注具体原因）",
+        "count": 4
+      },
+      {
+        "reason": "转行或不销售饮料产品",
+        "count": 2
+      },
+      {
+        "reason": "#N/A",
+        "count": 1
+      }
+    ],
+    "2月": [
+      {
+        "reason": "锁门/临时关门",
+        "count": 2229
+      },
+      {
+        "reason": "倒闭/停业",
+        "count": 328
+      },
+      {
+        "reason": "客户拒访，未采集",
+        "count": 274
+      },
+      {
+        "reason": "其他原因（若选此项，需备注具体原因）",
+        "count": 93
+      },
+      {
+        "reason": "根据地址找不到客户/拆迁",
+        "count": 59
+      },
+      {
+        "reason": "距离太远",
+        "count": 53
+      },
+      {
+        "reason": "特殊场所（学校/部队等）无法进入",
+        "count": 39
+      },
+      {
+        "reason": "门店装修",
+        "count": 34
+      },
+      {
+        "reason": "季节性不售卖饮料",
+        "count": 27
+      },
+      {
+        "reason": "转行或不销售饮料产品",
+        "count": 8
+      },
+      {
+        "reason": "其他原因（若选此项，要备注具体原因）",
+        "count": 5
+      }
+    ],
+    "3月": [
+      {
+        "reason": "锁门/临时关门",
+        "count": 1501
+      },
+      {
+        "reason": "倒闭/停业",
+        "count": 293
+      },
+      {
+        "reason": "客户拒访，未采集",
+        "count": 200
+      },
+      {
+        "reason": "门店装修",
+        "count": 72
+      },
+      {
+        "reason": "其他原因（若选此项，需备注具体原因）",
+        "count": 61
+      },
+      {
+        "reason": "根据地址找不到客户/拆迁",
+        "count": 44
+      },
+      {
+        "reason": "特殊场所（学校/部队等）无法进入",
+        "count": 30
+      },
+      {
+        "reason": "距离太远",
+        "count": 13
+      },
+      {
+        "reason": "季节性不售卖饮料",
+        "count": 13
+      },
+      {
+        "reason": "转行或不销售饮料产品",
+        "count": 9
+      },
+      {
+        "reason": "其他原因（若选此项，要备注具体原因）",
+        "count": 5
+      }
+    ],
+    "4月": [
+      {
+        "reason": "锁门/临时关门",
+        "count": 1283
+      },
+      {
+        "reason": "特殊场所（学校/部队等）无法进入",
+        "count": 344
+      },
+      {
+        "reason": "倒闭/停业",
+        "count": 326
+      },
+      {
+        "reason": "客户拒访，未采集",
+        "count": 222
+      },
+      {
+        "reason": "门店装修",
+        "count": 92
+      },
+      {
+        "reason": "其他原因（若选此项，需备注具体原因）",
+        "count": 50
+      },
+      {
+        "reason": "根据地址找不到客户/拆迁",
+        "count": 40
+      },
+      {
+        "reason": "距离太远",
+        "count": 7
+      },
+      {
+        "reason": "季节性不售卖饮料",
+        "count": 7
+      },
+      {
+        "reason": "其他原因（若选此项，要备注具体原因）",
+        "count": 4
+      },
+      {
+        "reason": "转行或不销售饮料产品",
+        "count": 4
+      }
+    ],
+    "5月": [
+      {
+        "reason": "锁门/临时关门",
+        "count": 1226
+      },
+      {
+        "reason": "特殊场所（学校/部队等）无法进入",
+        "count": 418
+      },
+      {
+        "reason": "倒闭/停业",
+        "count": 341
+      },
+      {
+        "reason": "客户拒访，未采集",
+        "count": 215
+      },
+      {
+        "reason": "根据地址找不到客户/拆迁",
+        "count": 85
+      },
+      {
+        "reason": "门店装修",
+        "count": 66
+      },
+      {
+        "reason": "其他原因（若选此项，需备注具体原因）",
+        "count": 53
+      },
+      {
+        "reason": "距离太远",
+        "count": 13
+      },
+      {
+        "reason": "转行或不销售饮料产品",
+        "count": 10
+      },
+      {
+        "reason": "其他原因（若选此项，要备注具体原因）",
+        "count": 6
+      },
+      {
+        "reason": "季节性不售卖饮料",
+        "count": 3
+      },
+      {
+        "reason": "进错门店",
+        "count": 2
+      }
+    ]
+  },
+  "error_types": {
+    "1月": [
+      {
+        "error": "TOP协议填错",
+        "count": 165
+      },
+      {
+        "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+        "count": 28
+      },
+      {
+        "error": "KA协议填错;协议错误",
+        "count": 14
+      },
+      {
+        "error": "漏拍立式货架",
+        "count": 5
+      },
+      {
+        "error": "拍摄模糊",
+        "count": 1
+      },
+      {
+        "error": "漏拍包柱",
+        "count": 1
+      },
+      {
+        "error": "地堆 卡板数",
+        "count": 1
+      }
+    ],
+    "1月_total": 215,
+    "2月": [
+      {
+        "error": "不规范拍摄，点了下一门",
+        "count": 41
+      },
+      {
+        "error": "无效检查不规范;签到异常且未按要求拍摄门头",
+        "count": 38
+      },
+      {
+        "error": "货多多1个填写错误",
+        "count": 31
+      },
+      {
+        "error": "无效检查不规范",
+        "count": 23
+      },
+      {
+        "error": "签到异常且未按要求拍摄门头",
+        "count": 17
+      },
+      {
+        "error": "套餐促销1填写错误",
+        "count": 17
+      },
+      {
+        "error": "我司冰柜1台纯净度100%填写错误",
+        "count": 13
+      },
+      {
+        "error": "漏拍主货架",
+        "count": 10
+      },
+      {
+        "error": "有折扣套餐1个填写错误",
+        "count": 8
+      },
+      {
+        "error": "KA协议;小货架陈列数量/堆箱陈列数量",
+        "count": 6
+      },
+      {
+        "error": "漏拍我司冰柜",
+        "count": 4
+      },
+      {
+        "error": "漏拍端架",
+        "count": 3
+      },
+      {
+        "error": "漏拍堆箱",
+        "count": 3
+      },
+      {
+        "error": "KA协议;我司冰箱门数",
+        "count": 3
+      },
+      {
+        "error": "漏拍立式货架",
+        "count": 3
+      },
+      {
+        "error": "漏拍其他陈列",
+        "count": 3
+      },
+      {
+        "error": "KA协议;中瓶可乐雪碧陈列货道数（冰柜内）",
+        "count": 3
+      },
+      {
+        "error": "不规范拍摄，点了下一门且缺角",
+        "count": 3
+      },
+      {
+        "error": "增投我司冰柜1台纯净度100%填写错误",
+        "count": 3
+      },
+      {
+        "error": "疑似漏拍堆箱",
+        "count": 3
+      }
+    ],
+    "2月_total": 283,
+    "3月": [
+      {
+        "error": "冰柜库存错误",
+        "count": 55
+      },
+      {
+        "error": "正确为货多多1个",
+        "count": 24
+      },
+      {
+        "error": "协议错误",
+        "count": 22
+      },
+      {
+        "error": "正确为我司冰柜(层)4层",
+        "count": 15
+      },
+      {
+        "error": "漏拍堆箱",
+        "count": 13
+      },
+      {
+        "error": "不规范拍摄影响识别;点了下一门导致识别错误",
+        "count": 11
+      },
+      {
+        "error": "漏拍竞品冰柜",
+        "count": 10
+      },
+      {
+        "error": "不规范拍摄影响识别",
+        "count": 10
+      },
+      {
+        "error": "正确为我司冰柜1台纯净度100%",
+        "count": 10
+      },
+      {
+        "error": "正确为货架(层)2层",
+        "count": 9
+      },
+      {
+        "error": "KA协议填写错误;我司产品陈列排面数（冰柜内）",
+        "count": 7
+      },
+      {
+        "error": "拍错模块，立式货架拍成端架",
+        "count": 7
+      },
+      {
+        "error": "正确为汽水星级",
+        "count": 7
+      },
+      {
+        "error": "漏拍套餐生动化",
+        "count": 6
+      },
+      {
+        "error": "漏拍立式货架",
+        "count": 6
+      },
+      {
+        "error": "魔抓吸盘问卷填错",
+        "count": 6
+      },
+      {
+        "error": "漏拍其他陈列",
+        "count": 6
+      },
+      {
+        "error": "正确为我司冰柜2台纯净度100%",
+        "count": 5
+      },
+      {
+        "error": "正确为增投我司冰柜1台纯净度100%",
+        "count": 5
+      },
+      {
+        "error": "拍摄正常无误;点了下一门导致识别错误",
+        "count": 5
+      }
+    ],
+    "3月_total": 375,
+    "4月": [
+      {
+        "error": "主货架场景漏拍",
+        "count": 62
+      },
+      {
+        "error": "二次陈列场景漏拍",
+        "count": 57
+      },
+      {
+        "error": "未按标准拍摄门头",
+        "count": 16
+      },
+      {
+        "error": "我司冰柜层数填错",
+        "count": 12
+      },
+      {
+        "error": "协议错误",
+        "count": 11
+      },
+      {
+        "error": "货架层数填错",
+        "count": 10
+      },
+      {
+        "error": "线上套餐未按标准上传",
+        "count": 10
+      },
+      {
+        "error": "冰柜纯净度填错",
+        "count": 10
+      },
+      {
+        "error": "汽水星级填错",
+        "count": 9
+      },
+      {
+        "error": "不规范拍照",
+        "count": 9
+      },
+      {
+        "error": "主货架场景漏拍、二次陈列场景漏拍",
+        "count": 8
+      },
+      {
+        "error": ";不规范拍照;拍摄不规范导致无法识别",
+        "count": 7
+      },
+      {
+        "error": ";不规范拍照",
+        "count": 7
+      },
+      {
+        "error": "中瓶可口可乐原味排面数（冰柜内）",
+        "count": 6
+      },
+      {
+        "error": "中瓶可乐雪碧陈列货道数（冰柜内）",
+        "count": 6
+      },
+      {
+        "error": "端架场景漏拍",
+        "count": 5
+      },
+      {
+        "error": "客户冰柜层数",
+        "count": 5
+      },
+      {
+        "error": ";;拍摄不规范导致无法识别",
+        "count": 5
+      },
+      {
+        "error": "漏拍主货架",
+        "count": 4
+      },
+      {
+        "error": "场景归类错误",
+        "count": 4
+      }
+    ],
+    "4月_total": 368,
+    "5月": [
+      {
+        "error": "违规检查;违规操作",
+        "count": 117
+      },
+      {
+        "error": "协议错误",
+        "count": 54
+      },
+      {
+        "error": "套餐填写错误;",
+        "count": 39
+      },
+      {
+        "error": "不规范查店",
+        "count": 31
+      },
+      {
+        "error": "KA协议填错;客户冰柜层数",
+        "count": 31
+      },
+      {
+        "error": "竞品冰柜漏拍",
+        "count": 25
+      },
+      {
+        "error": "我司冰柜填写错误;",
+        "count": 19
+      },
+      {
+        "error": "漏拍主货架",
+        "count": 18
+      },
+      {
+        "error": "不规范拍照",
+        "count": 17
+      },
+      {
+        "error": "主货架漏拍",
+        "count": 17
+      },
+      {
+        "error": "主货架场景漏拍",
+        "count": 16
+      },
+      {
+        "error": "KA协议填错;协议错误",
+        "count": 13
+      },
+      {
+        "error": "二陈漏拍",
+        "count": 13
+      },
+      {
+        "error": "违规检查;不规范拍照;疑似违规;违规操作",
+        "count": 12
+      },
+      {
+        "error": "二次陈列场景漏拍",
+        "count": 12
+      },
+      {
+        "error": "价格沟通错误",
+        "count": 12
+      },
+      {
+        "error": "KA协议填错;我司冰箱门数",
+        "count": 11
+      },
+      {
+        "error": "漏拍客户自有冰柜",
+        "count": 10
+      },
+      {
+        "error": "主货架环境照与IR识别照片拍反。",
+        "count": 8
+      },
+      {
+        "error": "漏拍端架",
+        "count": 7
+      }
+    ],
+    "5月_total": 744
+  },
+  "person_monthly": {
+    "1月": [
+      {
+        "name": "何慧梅",
+        "total": 2015,
+        "success": 1878,
+        "failed": 134,
+        "abnormal": 136,
+        "region": "赣州大区",
+        "success_rate": 93.2,
+        "abnormal_rate": 6.7
+      },
+      {
+        "name": "欧阳鹏",
+        "total": 1689,
+        "success": 1553,
+        "failed": 136,
+        "abnormal": 131,
+        "region": "宜春大区",
+        "success_rate": 91.9,
+        "abnormal_rate": 7.8
+      },
+      {
+        "name": "周棕明",
+        "total": 1377,
+        "success": 1114,
+        "failed": 263,
+        "abnormal": 256,
+        "region": "南昌大区",
+        "success_rate": 80.9,
+        "abnormal_rate": 18.6
+      },
+      {
+        "name": "姜梦佳",
+        "total": 1351,
+        "success": 1210,
+        "failed": 141,
+        "abnormal": 139,
+        "region": "南昌大区",
+        "success_rate": 89.6,
+        "abnormal_rate": 10.3
+      },
+      {
+        "name": "杨龙新",
+        "total": 1295,
+        "success": 1229,
+        "failed": 66,
+        "abnormal": 64,
+        "region": "南昌大区",
+        "success_rate": 94.9,
+        "abnormal_rate": 4.9
+      },
+      {
+        "name": "邓敦福",
+        "total": 1293,
+        "success": 1231,
+        "failed": 54,
+        "abnormal": 62,
+        "region": "南昌大区",
+        "success_rate": 95.2,
+        "abnormal_rate": 4.8
+      },
+      {
+        "name": "刘旭",
+        "total": 1204,
+        "success": 1137,
+        "failed": 67,
+        "abnormal": 65,
+        "region": "上饶大区",
+        "success_rate": 94.4,
+        "abnormal_rate": 5.4
+      },
+      {
+        "name": "邹聪",
+        "total": 1107,
+        "success": 1025,
+        "failed": 82,
+        "abnormal": 80,
+        "region": "南昌大区",
+        "success_rate": 92.6,
+        "abnormal_rate": 7.2
+      },
+      {
+        "name": "胡昕睿",
+        "total": 1018,
+        "success": 830,
+        "failed": 188,
+        "abnormal": 184,
+        "region": "南昌大区",
+        "success_rate": 81.5,
+        "abnormal_rate": 18.1
+      },
+      {
+        "name": "芦映霞",
+        "total": 999,
+        "success": 926,
+        "failed": 72,
+        "abnormal": 73,
+        "region": "南昌大区",
+        "success_rate": 92.7,
+        "abnormal_rate": 7.3
+      },
+      {
+        "name": "易艳红",
+        "total": 924,
+        "success": 862,
+        "failed": 62,
+        "abnormal": 60,
+        "region": "宜春大区",
+        "success_rate": 93.3,
+        "abnormal_rate": 6.5
+      },
+      {
+        "name": "章顺锋",
+        "total": 871,
+        "success": 771,
+        "failed": 100,
+        "abnormal": 96,
+        "region": "上饶大区",
+        "success_rate": 88.5,
+        "abnormal_rate": 11.0
+      },
+      {
+        "name": "邬琦",
+        "total": 845,
+        "success": 780,
+        "failed": 65,
+        "abnormal": 63,
+        "region": "宜春大区",
+        "success_rate": 92.3,
+        "abnormal_rate": 7.5
+      },
+      {
+        "name": "陈臆元",
+        "total": 826,
+        "success": 741,
+        "failed": 85,
+        "abnormal": 82,
+        "region": "赣州大区",
+        "success_rate": 89.7,
+        "abnormal_rate": 9.9
+      },
+      {
+        "name": "谢锦云",
+        "total": 760,
+        "success": 566,
+        "failed": 194,
+        "abnormal": 189,
+        "region": "上饶大区",
+        "success_rate": 74.5,
+        "abnormal_rate": 24.9
+      },
+      {
+        "name": "洪凯",
+        "total": 671,
+        "success": 619,
+        "failed": 52,
+        "abnormal": 52,
+        "region": "上饶大区",
+        "success_rate": 92.3,
+        "abnormal_rate": 7.7
+      },
+      {
+        "name": "胡家俊",
+        "total": 543,
+        "success": 505,
+        "failed": 38,
+        "abnormal": 38,
+        "region": "南昌大区",
+        "success_rate": 93.0,
+        "abnormal_rate": 7.0
+      },
+      {
+        "name": "周水琼",
+        "total": 522,
+        "success": 503,
+        "failed": 19,
+        "abnormal": 19,
+        "region": "赣州大区",
+        "success_rate": 96.4,
+        "abnormal_rate": 3.6
+      },
+      {
+        "name": "刁阳",
+        "total": 519,
+        "success": 469,
+        "failed": 50,
+        "abnormal": 50,
+        "region": "赣州大区",
+        "success_rate": 90.4,
+        "abnormal_rate": 9.6
+      },
+      {
+        "name": "朱永伟",
+        "total": 515,
+        "success": 464,
+        "failed": 51,
+        "abnormal": 51,
+        "region": "上饶大区",
+        "success_rate": 90.1,
+        "abnormal_rate": 9.9
+      },
+      {
+        "name": "钟鑫武",
+        "total": 464,
+        "success": 442,
+        "failed": 22,
+        "abnormal": 22,
+        "region": "宜春大区",
+        "success_rate": 95.3,
+        "abnormal_rate": 4.7
+      },
+      {
+        "name": "胡志彬",
+        "total": 437,
+        "success": 358,
+        "failed": 79,
+        "abnormal": 77,
+        "region": "上饶大区",
+        "success_rate": 81.9,
+        "abnormal_rate": 17.6
+      },
+      {
+        "name": "徐佩琦",
+        "total": 365,
+        "success": 354,
+        "failed": 11,
+        "abnormal": 11,
+        "region": "上饶大区",
+        "success_rate": 97.0,
+        "abnormal_rate": 3.0
+      },
+      {
+        "name": "李双源-上饶",
+        "total": 357,
+        "success": 305,
+        "failed": 52,
+        "abnormal": 46,
+        "region": "上饶大区",
+        "success_rate": 85.4,
+        "abnormal_rate": 12.9
+      },
+      {
+        "name": "廖文玲",
+        "total": 303,
+        "success": 273,
+        "failed": 30,
+        "abnormal": 30,
+        "region": "宜春大区",
+        "success_rate": 90.1,
+        "abnormal_rate": 9.9
+      },
+      {
+        "name": "丁豫",
+        "total": 244,
+        "success": 236,
+        "failed": 8,
+        "abnormal": 8,
+        "region": "南昌大区",
+        "success_rate": 96.7,
+        "abnormal_rate": 3.3
+      },
+      {
+        "name": "黄耀财",
+        "total": 98,
+        "success": 95,
+        "failed": 3,
+        "abnormal": 3,
+        "region": "赣州大区",
+        "success_rate": 96.9,
+        "abnormal_rate": 3.1
+      },
+      {
+        "name": "李双源-南昌",
+        "total": 47,
+        "success": 42,
+        "failed": 5,
+        "abnormal": 5,
+        "region": "南昌大区",
+        "success_rate": 89.4,
+        "abnormal_rate": 10.6
+      }
+    ],
+    "2月": [
+      {
+        "name": "何慧梅",
+        "total": 2314,
+        "success": 2080,
+        "failed": 231,
+        "abnormal": 234,
+        "region": "赣州大区",
+        "success_rate": 89.9,
+        "abnormal_rate": 10.1
+      },
+      {
+        "name": "杨龙新",
+        "total": 1468,
+        "success": 1255,
+        "failed": 213,
+        "abnormal": 213,
+        "region": "南昌大区",
+        "success_rate": 85.5,
+        "abnormal_rate": 14.5
+      },
+      {
+        "name": "欧阳鹏",
+        "total": 1337,
+        "success": 1166,
+        "failed": 171,
+        "abnormal": 171,
+        "region": "宜春大区",
+        "success_rate": 87.2,
+        "abnormal_rate": 12.8
+      },
+      {
+        "name": "邓敦福",
+        "total": 1327,
+        "success": 1187,
+        "failed": 140,
+        "abnormal": 140,
+        "region": "南昌大区",
+        "success_rate": 89.4,
+        "abnormal_rate": 10.6
+      },
+      {
+        "name": "邹聪",
+        "total": 1301,
+        "success": 1120,
+        "failed": 181,
+        "abnormal": 181,
+        "region": "南昌大区",
+        "success_rate": 86.1,
+        "abnormal_rate": 13.9
+      },
+      {
+        "name": "刘旭",
+        "total": 1172,
+        "success": 1083,
+        "failed": 89,
+        "abnormal": 89,
+        "region": "上饶大区",
+        "success_rate": 92.4,
+        "abnormal_rate": 7.6
+      },
+      {
+        "name": "姜梦佳",
+        "total": 1151,
+        "success": 901,
+        "failed": 250,
+        "abnormal": 250,
+        "region": "南昌大区",
+        "success_rate": 78.3,
+        "abnormal_rate": 21.7
+      },
+      {
+        "name": "周棕明",
+        "total": 988,
+        "success": 807,
+        "failed": 181,
+        "abnormal": 181,
+        "region": "南昌大区",
+        "success_rate": 81.7,
+        "abnormal_rate": 18.3
+      },
+      {
+        "name": "易艳红",
+        "total": 900,
+        "success": 801,
+        "failed": 99,
+        "abnormal": 99,
+        "region": "宜春大区",
+        "success_rate": 89.0,
+        "abnormal_rate": 11.0
+      },
+      {
+        "name": "章顺锋",
+        "total": 895,
+        "success": 761,
+        "failed": 134,
+        "abnormal": 134,
+        "region": "上饶大区",
+        "success_rate": 85.0,
+        "abnormal_rate": 15.0
+      },
+      {
+        "name": "芦映霞",
+        "total": 870,
+        "success": 749,
+        "failed": 121,
+        "abnormal": 121,
+        "region": "南昌大区",
+        "success_rate": 86.1,
+        "abnormal_rate": 13.9
+      },
+      {
+        "name": "胡昕睿",
+        "total": 863,
+        "success": 706,
+        "failed": 157,
+        "abnormal": 157,
+        "region": "南昌大区",
+        "success_rate": 81.8,
+        "abnormal_rate": 18.2
+      },
+      {
+        "name": "邬琦",
+        "total": 847,
+        "success": 760,
+        "failed": 87,
+        "abnormal": 87,
+        "region": "宜春大区",
+        "success_rate": 89.7,
+        "abnormal_rate": 10.3
+      },
+      {
+        "name": "钟鑫武",
+        "total": 801,
+        "success": 733,
+        "failed": 63,
+        "abnormal": 68,
+        "region": "宜春大区",
+        "success_rate": 91.5,
+        "abnormal_rate": 8.5
+      },
+      {
+        "name": "丁豫",
+        "total": 770,
+        "success": 669,
+        "failed": 101,
+        "abnormal": 101,
+        "region": "南昌大区",
+        "success_rate": 86.9,
+        "abnormal_rate": 13.1
+      },
+      {
+        "name": "包德炳-上饶",
+        "total": 757,
+        "success": 608,
+        "failed": 149,
+        "abnormal": 149,
+        "region": "上饶大区",
+        "success_rate": 80.3,
+        "abnormal_rate": 19.7
+      },
+      {
+        "name": "谢锦云",
+        "total": 688,
+        "success": 356,
+        "failed": 332,
+        "abnormal": 332,
+        "region": "上饶大区",
+        "success_rate": 51.7,
+        "abnormal_rate": 48.3
+      },
+      {
+        "name": "洪凯",
+        "total": 688,
+        "success": 615,
+        "failed": 73,
+        "abnormal": 73,
+        "region": "上饶大区",
+        "success_rate": 89.4,
+        "abnormal_rate": 10.6
+      },
+      {
+        "name": "陈臆元",
+        "total": 675,
+        "success": 611,
+        "failed": 64,
+        "abnormal": 64,
+        "region": "赣州大区",
+        "success_rate": 90.5,
+        "abnormal_rate": 9.5
+      },
+      {
+        "name": "胡家俊",
+        "total": 528,
+        "success": 481,
+        "failed": 47,
+        "abnormal": 47,
+        "region": "南昌大区",
+        "success_rate": 91.1,
+        "abnormal_rate": 8.9
+      },
+      {
+        "name": "徐佩琦",
+        "total": 437,
+        "success": 413,
+        "failed": 24,
+        "abnormal": 24,
+        "region": "上饶大区",
+        "success_rate": 94.5,
+        "abnormal_rate": 5.5
+      },
+      {
+        "name": "朱永伟",
+        "total": 398,
+        "success": 352,
+        "failed": 46,
+        "abnormal": 46,
+        "region": "上饶大区",
+        "success_rate": 88.4,
+        "abnormal_rate": 11.6
+      },
+      {
+        "name": "广州支援",
+        "total": 353,
+        "success": 242,
+        "failed": 111,
+        "abnormal": 111,
+        "region": "上饶大区",
+        "success_rate": 68.6,
+        "abnormal_rate": 31.4
+      },
+      {
+        "name": "刁阳",
+        "total": 194,
+        "success": 160,
+        "failed": 34,
+        "abnormal": 34,
+        "region": "赣州大区",
+        "success_rate": 82.5,
+        "abnormal_rate": 17.5
+      },
+      {
+        "name": "黄耀财",
+        "total": 144,
+        "success": 133,
+        "failed": 11,
+        "abnormal": 11,
+        "region": "赣州大区",
+        "success_rate": 92.4,
+        "abnormal_rate": 7.6
+      },
+      {
+        "name": "胡志彬",
+        "total": 130,
+        "success": 110,
+        "failed": 20,
+        "abnormal": 20,
+        "region": "上饶大区",
+        "success_rate": 84.6,
+        "abnormal_rate": 15.4
+      },
+      {
+        "name": "李双源-南昌",
+        "total": 50,
+        "success": 38,
+        "failed": 12,
+        "abnormal": 12,
+        "region": "南昌大区",
+        "success_rate": 76.0,
+        "abnormal_rate": 24.0
+      }
+    ],
+    "3月": [
+      {
+        "name": "何慧梅",
+        "total": 2605,
+        "success": 2460,
+        "failed": 141,
+        "abnormal": 145,
+        "region": "赣州大区",
+        "success_rate": 94.4,
+        "abnormal_rate": 5.6
+      },
+      {
+        "name": "欧阳鹏",
+        "total": 1669,
+        "success": 1503,
+        "failed": 166,
+        "abnormal": 166,
+        "region": "宜春大区",
+        "success_rate": 90.1,
+        "abnormal_rate": 9.9
+      },
+      {
+        "name": "邓敦福",
+        "total": 1438,
+        "success": 1343,
+        "failed": 80,
+        "abnormal": 95,
+        "region": "南昌大区",
+        "success_rate": 93.4,
+        "abnormal_rate": 6.6
+      },
+      {
+        "name": "杨龙新",
+        "total": 1261,
+        "success": 1187,
+        "failed": 74,
+        "abnormal": 74,
+        "region": "南昌大区",
+        "success_rate": 94.1,
+        "abnormal_rate": 5.9
+      },
+      {
+        "name": "邹聪",
+        "total": 1183,
+        "success": 1088,
+        "failed": 95,
+        "abnormal": 95,
+        "region": "南昌大区",
+        "success_rate": 92.0,
+        "abnormal_rate": 8.0
+      },
+      {
+        "name": "周棕明",
+        "total": 1106,
+        "success": 988,
+        "failed": 118,
+        "abnormal": 118,
+        "region": "南昌大区",
+        "success_rate": 89.3,
+        "abnormal_rate": 10.7
+      },
+      {
+        "name": "姜梦佳",
+        "total": 1052,
+        "success": 948,
+        "failed": 104,
+        "abnormal": 104,
+        "region": "南昌大区",
+        "success_rate": 90.1,
+        "abnormal_rate": 9.9
+      },
+      {
+        "name": "刘旭",
+        "total": 1051,
+        "success": 975,
+        "failed": 76,
+        "abnormal": 76,
+        "region": "上饶大区",
+        "success_rate": 92.8,
+        "abnormal_rate": 7.2
+      },
+      {
+        "name": "易艳红",
+        "total": 1033,
+        "success": 947,
+        "failed": 86,
+        "abnormal": 86,
+        "region": "宜春大区",
+        "success_rate": 91.7,
+        "abnormal_rate": 8.3
+      },
+      {
+        "name": "章顺锋",
+        "total": 977,
+        "success": 822,
+        "failed": 155,
+        "abnormal": 155,
+        "region": "上饶大区",
+        "success_rate": 84.1,
+        "abnormal_rate": 15.9
+      },
+      {
+        "name": "胡昕睿",
+        "total": 923,
+        "success": 827,
+        "failed": 96,
+        "abnormal": 96,
+        "region": "南昌大区",
+        "success_rate": 89.6,
+        "abnormal_rate": 10.4
+      },
+      {
+        "name": "邬琦",
+        "total": 895,
+        "success": 811,
+        "failed": 84,
+        "abnormal": 84,
+        "region": "宜春大区",
+        "success_rate": 90.6,
+        "abnormal_rate": 9.4
+      },
+      {
+        "name": "张晓亮-外包",
+        "total": 851,
+        "success": 714,
+        "failed": 136,
+        "abnormal": 137,
+        "region": "南昌大区",
+        "success_rate": 83.9,
+        "abnormal_rate": 16.1
+      },
+      {
+        "name": "芦映霞",
+        "total": 835,
+        "success": 773,
+        "failed": 62,
+        "abnormal": 62,
+        "region": "南昌大区",
+        "success_rate": 92.6,
+        "abnormal_rate": 7.4
+      },
+      {
+        "name": "陈臆元",
+        "total": 798,
+        "success": 714,
+        "failed": 84,
+        "abnormal": 84,
+        "region": "赣州大区",
+        "success_rate": 89.5,
+        "abnormal_rate": 10.5
+      },
+      {
+        "name": "钟鑫武",
+        "total": 797,
+        "success": 769,
+        "failed": 19,
+        "abnormal": 28,
+        "region": "宜春大区",
+        "success_rate": 96.5,
+        "abnormal_rate": 3.5
+      },
+      {
+        "name": "洪凯",
+        "total": 784,
+        "success": 719,
+        "failed": 65,
+        "abnormal": 65,
+        "region": "上饶大区",
+        "success_rate": 91.7,
+        "abnormal_rate": 8.3
+      },
+      {
+        "name": "丁豫",
+        "total": 717,
+        "success": 666,
+        "failed": 51,
+        "abnormal": 51,
+        "region": "南昌大区",
+        "success_rate": 92.9,
+        "abnormal_rate": 7.1
+      },
+      {
+        "name": "谢锦云",
+        "total": 659,
+        "success": 386,
+        "failed": 272,
+        "abnormal": 273,
+        "region": "上饶大区",
+        "success_rate": 58.6,
+        "abnormal_rate": 41.4
+      },
+      {
+        "name": "胡家俊",
+        "total": 644,
+        "success": 592,
+        "failed": 52,
+        "abnormal": 52,
+        "region": "南昌大区",
+        "success_rate": 91.9,
+        "abnormal_rate": 8.1
+      },
+      {
+        "name": "徐佩琦",
+        "total": 508,
+        "success": 492,
+        "failed": 16,
+        "abnormal": 16,
+        "region": "上饶大区",
+        "success_rate": 96.9,
+        "abnormal_rate": 3.1
+      },
+      {
+        "name": "朱永伟",
+        "total": 452,
+        "success": 419,
+        "failed": 33,
+        "abnormal": 33,
+        "region": "上饶大区",
+        "success_rate": 92.7,
+        "abnormal_rate": 7.3
+      },
+      {
+        "name": "刘丽红",
+        "total": 407,
+        "success": 339,
+        "failed": 68,
+        "abnormal": 68,
+        "region": "上饶大区",
+        "success_rate": 83.3,
+        "abnormal_rate": 16.7
+      },
+      {
+        "name": "胡志彬",
+        "total": 248,
+        "success": 213,
+        "failed": 35,
+        "abnormal": 35,
+        "region": "上饶大区",
+        "success_rate": 85.9,
+        "abnormal_rate": 14.1
+      },
+      {
+        "name": "黄耀财",
+        "total": 188,
+        "success": 170,
+        "failed": 18,
+        "abnormal": 18,
+        "region": "赣州大区",
+        "success_rate": 90.4,
+        "abnormal_rate": 9.6
+      },
+      {
+        "name": "刁阳",
+        "total": 165,
+        "success": 150,
+        "failed": 15,
+        "abnormal": 15,
+        "region": "赣州大区",
+        "success_rate": 90.9,
+        "abnormal_rate": 9.1
+      },
+      {
+        "name": "张晓亮",
+        "total": 54,
+        "success": 44,
+        "failed": 10,
+        "abnormal": 10,
+        "region": "南昌大区",
+        "success_rate": 81.5,
+        "abnormal_rate": 18.5
+      }
+    ],
+    "4月": [
+      {
+        "name": "何慧梅",
+        "total": 2281,
+        "success": 2131,
+        "failed": 150,
+        "abnormal": 150,
+        "region": "赣州大区",
+        "success_rate": 93.4,
+        "abnormal_rate": 6.6
+      },
+      {
+        "name": "欧阳鹏",
+        "total": 1582,
+        "success": 1394,
+        "failed": 188,
+        "abnormal": 188,
+        "region": "宜春大区",
+        "success_rate": 88.1,
+        "abnormal_rate": 11.9
+      },
+      {
+        "name": "周棕明",
+        "total": 1423,
+        "success": 1162,
+        "failed": 261,
+        "abnormal": 261,
+        "region": "南昌大区",
+        "success_rate": 81.7,
+        "abnormal_rate": 18.3
+      },
+      {
+        "name": "邓敦福",
+        "total": 1409,
+        "success": 1325,
+        "failed": 71,
+        "abnormal": 84,
+        "region": "南昌大区",
+        "success_rate": 94.0,
+        "abnormal_rate": 6.0
+      },
+      {
+        "name": "姜梦佳",
+        "total": 1306,
+        "success": 1176,
+        "failed": 130,
+        "abnormal": 130,
+        "region": "南昌大区",
+        "success_rate": 90.0,
+        "abnormal_rate": 10.0
+      },
+      {
+        "name": "杨龙新",
+        "total": 1074,
+        "success": 1005,
+        "failed": 69,
+        "abnormal": 69,
+        "region": "南昌大区",
+        "success_rate": 93.6,
+        "abnormal_rate": 6.4
+      },
+      {
+        "name": "胡昕睿",
+        "total": 1044,
+        "success": 895,
+        "failed": 149,
+        "abnormal": 149,
+        "region": "南昌大区",
+        "success_rate": 85.7,
+        "abnormal_rate": 14.3
+      },
+      {
+        "name": "邹聪",
+        "total": 1011,
+        "success": 930,
+        "failed": 81,
+        "abnormal": 81,
+        "region": "南昌大区",
+        "success_rate": 92.0,
+        "abnormal_rate": 8.0
+      },
+      {
+        "name": "邬琦",
+        "total": 975,
+        "success": 898,
+        "failed": 77,
+        "abnormal": 77,
+        "region": "宜春大区",
+        "success_rate": 92.1,
+        "abnormal_rate": 7.9
+      },
+      {
+        "name": "陈小军",
+        "total": 924,
+        "success": 817,
+        "failed": 107,
+        "abnormal": 107,
+        "region": "上饶大区",
+        "success_rate": 88.4,
+        "abnormal_rate": 11.6
+      },
+      {
+        "name": "易艳红",
+        "total": 907,
+        "success": 832,
+        "failed": 74,
+        "abnormal": 75,
+        "region": "宜春大区",
+        "success_rate": 91.7,
+        "abnormal_rate": 8.3
+      },
+      {
+        "name": "洪凯",
+        "total": 902,
+        "success": 831,
+        "failed": 71,
+        "abnormal": 71,
+        "region": "上饶大区",
+        "success_rate": 92.1,
+        "abnormal_rate": 7.9
+      },
+      {
+        "name": "钟鑫武",
+        "total": 835,
+        "success": 804,
+        "failed": 28,
+        "abnormal": 31,
+        "region": "宜春大区",
+        "success_rate": 96.3,
+        "abnormal_rate": 3.7
+      },
+      {
+        "name": "谢锦云",
+        "total": 744,
+        "success": 529,
+        "failed": 215,
+        "abnormal": 215,
+        "region": "上饶大区",
+        "success_rate": 71.1,
+        "abnormal_rate": 28.9
+      },
+      {
+        "name": "芦映霞",
+        "total": 742,
+        "success": 677,
+        "failed": 65,
+        "abnormal": 65,
+        "region": "南昌大区",
+        "success_rate": 91.2,
+        "abnormal_rate": 8.8
+      },
+      {
+        "name": "刘丽红",
+        "total": 667,
+        "success": 592,
+        "failed": 75,
+        "abnormal": 75,
+        "region": "上饶大区",
+        "success_rate": 88.8,
+        "abnormal_rate": 11.2
+      },
+      {
+        "name": "丁豫",
+        "total": 666,
+        "success": 622,
+        "failed": 44,
+        "abnormal": 44,
+        "region": "南昌大区",
+        "success_rate": 93.4,
+        "abnormal_rate": 6.6
+      },
+      {
+        "name": "章顺锋",
+        "total": 665,
+        "success": 553,
+        "failed": 112,
+        "abnormal": 112,
+        "region": "上饶大区",
+        "success_rate": 83.2,
+        "abnormal_rate": 16.8
+      },
+      {
+        "name": "包德炳",
+        "total": 630,
+        "success": 586,
+        "failed": 44,
+        "abnormal": 44,
+        "region": "上饶大区",
+        "success_rate": 93.0,
+        "abnormal_rate": 7.0
+      },
+      {
+        "name": "胡家俊",
+        "total": 600,
+        "success": 556,
+        "failed": 44,
+        "abnormal": 44,
+        "region": "南昌大区",
+        "success_rate": 92.7,
+        "abnormal_rate": 7.3
+      },
+      {
+        "name": "陈臆元",
+        "total": 481,
+        "success": 433,
+        "failed": 48,
+        "abnormal": 48,
+        "region": "赣州大区",
+        "success_rate": 90.0,
+        "abnormal_rate": 10.0
+      },
+      {
+        "name": "徐佩琦",
+        "total": 462,
+        "success": 451,
+        "failed": 11,
+        "abnormal": 11,
+        "region": "上饶大区",
+        "success_rate": 97.6,
+        "abnormal_rate": 2.4
+      },
+      {
+        "name": "张晓亮",
+        "total": 343,
+        "success": 285,
+        "failed": 58,
+        "abnormal": 58,
+        "region": "南昌大区",
+        "success_rate": 83.1,
+        "abnormal_rate": 16.9
+      },
+      {
+        "name": "伍洋",
+        "total": 343,
+        "success": 273,
+        "failed": 70,
+        "abnormal": 70,
+        "region": "南昌大区",
+        "success_rate": 79.6,
+        "abnormal_rate": 20.4
+      },
+      {
+        "name": "舒炎",
+        "total": 305,
+        "success": 274,
+        "failed": 31,
+        "abnormal": 31,
+        "region": "上饶大区",
+        "success_rate": 89.8,
+        "abnormal_rate": 10.2
+      },
+      {
+        "name": "冯方方",
+        "total": 279,
+        "success": 248,
+        "failed": 31,
+        "abnormal": 31,
+        "region": "上饶大区",
+        "success_rate": 88.9,
+        "abnormal_rate": 11.1
+      },
+      {
+        "name": "胡志彬",
+        "total": 199,
+        "success": 177,
+        "failed": 22,
+        "abnormal": 22,
+        "region": "上饶大区",
+        "success_rate": 88.9,
+        "abnormal_rate": 11.1
+      },
+      {
+        "name": "黄耀财",
+        "total": 161,
+        "success": 155,
+        "failed": 6,
+        "abnormal": 6,
+        "region": "赣州大区",
+        "success_rate": 96.3,
+        "abnormal_rate": 3.7
+      },
+      {
+        "name": "刁阳",
+        "total": 156,
+        "success": 145,
+        "failed": 11,
+        "abnormal": 11,
+        "region": "赣州大区",
+        "success_rate": 92.9,
+        "abnormal_rate": 7.1
+      },
+      {
+        "name": "李翔",
+        "total": 109,
+        "success": 103,
+        "failed": 6,
+        "abnormal": 6,
+        "region": "赣州大区",
+        "success_rate": 94.5,
+        "abnormal_rate": 5.5
+      },
+      {
+        "name": "邓义涛",
+        "total": 89,
+        "success": 86,
+        "failed": 3,
+        "abnormal": 3,
+        "region": "赣州大区",
+        "success_rate": 96.6,
+        "abnormal_rate": 3.4
+      },
+      {
+        "name": "马里金",
+        "total": 84,
+        "success": 80,
+        "failed": 3,
+        "abnormal": 4,
+        "region": "赣州大区",
+        "success_rate": 95.2,
+        "abnormal_rate": 4.8
+      },
+      {
+        "name": "方海铸",
+        "total": 58,
+        "success": 52,
+        "failed": 6,
+        "abnormal": 6,
+        "region": "赣州大区",
+        "success_rate": 89.7,
+        "abnormal_rate": 10.3
+      }
+    ],
+    "5月": [
+      {
+        "name": "陈小军",
+        "total": 1362,
+        "success": 1238,
+        "failed": 123,
+        "abnormal": 124,
+        "region": "上饶大区",
+        "success_rate": 90.9,
+        "abnormal_rate": 9.1
+      },
+      {
+        "name": "邓敦福",
+        "total": 1272,
+        "success": 1201,
+        "failed": 66,
+        "abnormal": 71,
+        "region": "南昌大区",
+        "success_rate": 94.4,
+        "abnormal_rate": 5.6
+      },
+      {
+        "name": "周棕明",
+        "total": 1255,
+        "success": 1096,
+        "failed": 157,
+        "abnormal": 159,
+        "region": "南昌大区",
+        "success_rate": 87.3,
+        "abnormal_rate": 12.7
+      },
+      {
+        "name": "姜梦佳",
+        "total": 1181,
+        "success": 1055,
+        "failed": 124,
+        "abnormal": 126,
+        "region": "南昌大区",
+        "success_rate": 89.3,
+        "abnormal_rate": 10.7
+      },
+      {
+        "name": "包德炳",
+        "total": 1170,
+        "success": 1029,
+        "failed": 141,
+        "abnormal": 141,
+        "region": "宜春大区",
+        "success_rate": 87.9,
+        "abnormal_rate": 12.1
+      },
+      {
+        "name": "袁国裔",
+        "total": 1066,
+        "success": 983,
+        "failed": 83,
+        "abnormal": 83,
+        "region": "宜春大区",
+        "success_rate": 92.2,
+        "abnormal_rate": 7.8
+      },
+      {
+        "name": "胡昕睿",
+        "total": 1042,
+        "success": 889,
+        "failed": 151,
+        "abnormal": 153,
+        "region": "南昌大区",
+        "success_rate": 85.3,
+        "abnormal_rate": 14.7
+      },
+      {
+        "name": "刘海林",
+        "total": 962,
+        "success": 898,
+        "failed": 64,
+        "abnormal": 64,
+        "region": "赣州大区",
+        "success_rate": 93.3,
+        "abnormal_rate": 6.7
+      },
+      {
+        "name": "伍洋",
+        "total": 854,
+        "success": 618,
+        "failed": 232,
+        "abnormal": 236,
+        "region": "南昌大区",
+        "success_rate": 72.4,
+        "abnormal_rate": 27.6
+      },
+      {
+        "name": "芦映霞",
+        "total": 821,
+        "success": 739,
+        "failed": 82,
+        "abnormal": 82,
+        "region": "南昌大区",
+        "success_rate": 90.0,
+        "abnormal_rate": 10.0
+      },
+      {
+        "name": "洪凯",
+        "total": 818,
+        "success": 770,
+        "failed": 48,
+        "abnormal": 48,
+        "region": "上饶大区",
+        "success_rate": 94.1,
+        "abnormal_rate": 5.9
+      },
+      {
+        "name": "夏勍炜",
+        "total": 771,
+        "success": 667,
+        "failed": 104,
+        "abnormal": 104,
+        "region": "赣州大区",
+        "success_rate": 86.5,
+        "abnormal_rate": 13.5
+      },
+      {
+        "name": "钟鑫武",
+        "total": 770,
+        "success": 737,
+        "failed": 23,
+        "abnormal": 33,
+        "region": "宜春大区",
+        "success_rate": 95.7,
+        "abnormal_rate": 4.3
+      },
+      {
+        "name": "谢锦云",
+        "total": 751,
+        "success": 583,
+        "failed": 161,
+        "abnormal": 168,
+        "region": "上饶大区",
+        "success_rate": 77.6,
+        "abnormal_rate": 22.4
+      },
+      {
+        "name": "刘丽红",
+        "total": 726,
+        "success": 623,
+        "failed": 103,
+        "abnormal": 103,
+        "region": "上饶大区",
+        "success_rate": 85.8,
+        "abnormal_rate": 14.2
+      },
+      {
+        "name": "赵静",
+        "total": 710,
+        "success": 630,
+        "failed": 80,
+        "abnormal": 80,
+        "region": "宜春大区",
+        "success_rate": 88.7,
+        "abnormal_rate": 11.3
+      },
+      {
+        "name": "胡家俊",
+        "total": 684,
+        "success": 633,
+        "failed": 51,
+        "abnormal": 51,
+        "region": "南昌大区",
+        "success_rate": 92.5,
+        "abnormal_rate": 7.5
+      },
+      {
+        "name": "丁豫",
+        "total": 652,
+        "success": 623,
+        "failed": 29,
+        "abnormal": 29,
+        "region": "南昌大区",
+        "success_rate": 95.6,
+        "abnormal_rate": 4.4
+      },
+      {
+        "name": "李翔",
+        "total": 647,
+        "success": 602,
+        "failed": 45,
+        "abnormal": 45,
+        "region": "赣州大区",
+        "success_rate": 93.0,
+        "abnormal_rate": 7.0
+      },
+      {
+        "name": "朱春武",
+        "total": 556,
+        "success": 522,
+        "failed": 34,
+        "abnormal": 34,
+        "region": "上饶大区",
+        "success_rate": 93.9,
+        "abnormal_rate": 6.1
+      },
+      {
+        "name": "章顺锋",
+        "total": 539,
+        "success": 433,
+        "failed": 102,
+        "abnormal": 106,
+        "region": "上饶大区",
+        "success_rate": 80.3,
+        "abnormal_rate": 19.7
+      },
+      {
+        "name": "邓义涛",
+        "total": 538,
+        "success": 483,
+        "failed": 55,
+        "abnormal": 55,
+        "region": "赣州大区",
+        "success_rate": 89.8,
+        "abnormal_rate": 10.2
+      },
+      {
+        "name": "朱梃树",
+        "total": 531,
+        "success": 495,
+        "failed": 36,
+        "abnormal": 36,
+        "region": "赣州大区",
+        "success_rate": 93.2,
+        "abnormal_rate": 6.8
+      },
+      {
+        "name": "舒炎",
+        "total": 479,
+        "success": 438,
+        "failed": 41,
+        "abnormal": 41,
+        "region": "上饶大区",
+        "success_rate": 91.4,
+        "abnormal_rate": 8.6
+      },
+      {
+        "name": "马里金",
+        "total": 466,
+        "success": 403,
+        "failed": 63,
+        "abnormal": 63,
+        "region": "赣州大区",
+        "success_rate": 86.5,
+        "abnormal_rate": 13.5
+      },
+      {
+        "name": "王炳坤",
+        "total": 450,
+        "success": 418,
+        "failed": 32,
+        "abnormal": 32,
+        "region": "赣州大区",
+        "success_rate": 92.9,
+        "abnormal_rate": 7.1
+      },
+      {
+        "name": "徐佩琦",
+        "total": 424,
+        "success": 418,
+        "failed": 6,
+        "abnormal": 6,
+        "region": "上饶大区",
+        "success_rate": 98.6,
+        "abnormal_rate": 1.4
+      },
+      {
+        "name": "张晓亮",
+        "total": 401,
+        "success": 358,
+        "failed": 43,
+        "abnormal": 43,
+        "region": "赣州大区",
+        "success_rate": 89.3,
+        "abnormal_rate": 10.7
+      },
+      {
+        "name": "冯方方",
+        "total": 360,
+        "success": 317,
+        "failed": 43,
+        "abnormal": 43,
+        "region": "上饶大区",
+        "success_rate": 88.1,
+        "abnormal_rate": 11.9
+      },
+      {
+        "name": "肖南平",
+        "total": 312,
+        "success": 292,
+        "failed": 20,
+        "abnormal": 20,
+        "region": "赣州大区",
+        "success_rate": 93.6,
+        "abnormal_rate": 6.4
+      },
+      {
+        "name": "胡志彬",
+        "total": 229,
+        "success": 196,
+        "failed": 33,
+        "abnormal": 33,
+        "region": "上饶大区",
+        "success_rate": 85.6,
+        "abnormal_rate": 14.4
+      },
+      {
+        "name": "李总-支援",
+        "total": 207,
+        "success": 182,
+        "failed": 25,
+        "abnormal": 25,
+        "region": "赣州大区",
+        "success_rate": 87.9,
+        "abnormal_rate": 12.1
+      },
+      {
+        "name": "刘海健",
+        "total": 9,
+        "success": 8,
+        "failed": 1,
+        "abnormal": 1,
+        "region": "宜春大区",
+        "success_rate": 88.9,
+        "abnormal_rate": 11.1
+      },
+      {
+        "name": "简驰",
+        "total": 4,
+        "success": 4,
+        "failed": 0,
+        "abnormal": 0,
+        "region": "宜春大区",
+        "success_rate": 100.0,
+        "abnormal_rate": 0.0
+      }
+    ]
+  },
+  "person_errors": {
+    "1月": [
+      {
+        "name": "何慧梅",
+        "region": "赣州大区",
+        "total_errors": 21,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 14
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 3
+          },
+          {
+            "error": "漏拍立式货架",
+            "count": 1
+          },
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 1
+          },
+          {
+            "error": "拍摄模糊",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "姜梦佳",
+        "region": "南昌大区",
+        "total_errors": 19,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 18
+          },
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邹聪",
+        "region": "赣州大区",
+        "total_errors": 15,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 10
+          },
+          {
+            "error": "漏拍立式货架",
+            "count": 2
+          },
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 2
+          },
+          {
+            "error": "地堆 卡板数",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "周棕明",
+        "region": "南昌大区",
+        "total_errors": 14,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 12
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "章顺锋",
+        "region": "上饶大区",
+        "total_errors": 13,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 11
+          },
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 1
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "欧阳鹏",
+        "region": "宜春大区",
+        "total_errors": 12,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 10
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "刁阳",
+        "region": "赣州大区",
+        "total_errors": 11,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 10
+          },
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡昕睿",
+        "region": "南昌大区",
+        "total_errors": 10,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 8
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 1
+          },
+          {
+            "error": "漏拍立式货架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "周水琼",
+        "region": "赣州大区",
+        "total_errors": 10,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 6
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "刘旭",
+        "region": "上饶大区",
+        "total_errors": 9,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 5
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "洪凯",
+        "region": "上饶大区",
+        "total_errors": 8,
+        "top_errors": [
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 6
+          },
+          {
+            "error": "TOP协议填错",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "邬琦",
+        "region": "宜春大区",
+        "total_errors": 7,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 7
+          }
+        ]
+      },
+      {
+        "name": "杨龙新",
+        "region": "赣州大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 5
+          },
+          {
+            "error": "漏拍立式货架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "芦映霞",
+        "region": "南昌大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "name": "黄耀财",
+        "region": "赣州大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "name": "陈臆元",
+        "region": "赣州大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 4
+          },
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 1
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "李双源-南昌",
+        "region": "南昌大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "name": "谢锦云",
+        "region": "上饶大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 3
+          },
+          {
+            "error": "TOP协议填错",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "朱永伟",
+        "region": "上饶大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 2
+          },
+          {
+            "error": "TOP协议填错",
+            "count": 2
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "易艳红",
+        "region": "宜春大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "廖文玲",
+        "region": "宜春大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "钟鑫武",
+        "region": "宜春大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 2
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡家俊",
+        "region": "南昌大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "name": "李双源-上饶",
+        "region": "上饶大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 1
+          },
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 1
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邓敦福",
+        "region": "南昌大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 2
+          },
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡志彬",
+        "region": "上饶大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 2
+          },
+          {
+            "error": "冰柜分开拍但点了下一门，属于未完整拍摄",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "丁豫",
+        "region": "南昌大区",
+        "total_errors": 2,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "徐佩琦",
+        "region": "上饶大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": "TOP协议填错",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "2月": [
+      {
+        "name": "包德炳-上饶",
+        "region": "南昌大区",
+        "total_errors": 30,
+        "top_errors": [
+          {
+            "error": "签到异常且未按要求拍摄门头",
+            "count": 15
+          },
+          {
+            "error": "无效检查不规范;签到异常且未按要求拍摄门头",
+            "count": 5
+          },
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 3
+          },
+          {
+            "error": "KA协议;小货架陈列数量/堆箱陈列数量",
+            "count": 3
+          },
+          {
+            "error": "漏拍我司冰柜",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "欧阳鹏",
+        "region": "宜春大区",
+        "total_errors": 29,
+        "top_errors": [
+          {
+            "error": "货多多1个填写错误",
+            "count": 11
+          },
+          {
+            "error": "套餐促销1填写错误",
+            "count": 5
+          },
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 4
+          },
+          {
+            "error": "汽水星级填写错误",
+            "count": 2
+          },
+          {
+            "error": "协议错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "周棕明",
+        "region": "南昌大区",
+        "total_errors": 29,
+        "top_errors": [
+          {
+            "error": "无效检查不规范;签到异常且未按要求拍摄门头",
+            "count": 13
+          },
+          {
+            "error": "无效检查不规范",
+            "count": 9
+          },
+          {
+            "error": "KA协议;多点个数",
+            "count": 1
+          },
+          {
+            "error": "套餐促销1填写错误",
+            "count": 1
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "何慧梅",
+        "region": "赣州大区",
+        "total_errors": 22,
+        "top_errors": [
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 12
+          },
+          {
+            "error": "漏拍我司冰柜",
+            "count": 2
+          },
+          {
+            "error": "无效检查不规范;无效门店未按要求拍摄门头照",
+            "count": 2
+          },
+          {
+            "error": "KA协议;客户冰柜层数",
+            "count": 1
+          },
+          {
+            "error": "KA协议;端架生动化活化 个数;不规范拍摄，点了下一门",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邬琦",
+        "region": "宜春大区",
+        "total_errors": 21,
+        "top_errors": [
+          {
+            "error": "货多多1个填写错误",
+            "count": 10
+          },
+          {
+            "error": "套餐促销1填写错误",
+            "count": 4
+          },
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 1
+          },
+          {
+            "error": "漏拍堆箱",
+            "count": 1
+          },
+          {
+            "error": "漏拍立式货架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "杨龙新",
+        "region": "赣州大区",
+        "total_errors": 18,
+        "top_errors": [
+          {
+            "error": "无效检查不规范",
+            "count": 6
+          },
+          {
+            "error": "KA协议;我司冰箱门数",
+            "count": 3
+          },
+          {
+            "error": "货多多1个填写错误",
+            "count": 2
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          },
+          {
+            "error": "漏拍其他陈列",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "洪凯",
+        "region": "上饶大区",
+        "total_errors": 17,
+        "top_errors": [
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 8
+          },
+          {
+            "error": "有折扣套餐1个填写错误",
+            "count": 2
+          },
+          {
+            "error": "货多多1个填写错误",
+            "count": 2
+          },
+          {
+            "error": "无效检查不规范;签到异常且未按要求拍摄门头",
+            "count": 2
+          },
+          {
+            "error": "KA协议;堆箱箱数",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "姜梦佳",
+        "region": "南昌大区",
+        "total_errors": 14,
+        "top_errors": [
+          {
+            "error": "无效检查不规范;签到异常且未按要求拍摄门头",
+            "count": 6
+          },
+          {
+            "error": "无效检查不规范",
+            "count": 3
+          },
+          {
+            "error": "不规范拍摄，点了下一门且缺角",
+            "count": 1
+          },
+          {
+            "error": "我司冰柜1台纯净度100%填写错误",
+            "count": 1
+          },
+          {
+            "error": "我司冰柜(层)4层填写错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "钟鑫武",
+        "region": "宜春大区",
+        "total_errors": 14,
+        "top_errors": [
+          {
+            "error": "我司冰柜1台纯净度100%填写错误",
+            "count": 4
+          },
+          {
+            "error": "货多多1个填写错误",
+            "count": 4
+          },
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 2
+          },
+          {
+            "error": "货架(节)1节填写错误",
+            "count": 1
+          },
+          {
+            "error": "增投我司冰柜1台纯净度100%填写错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "刘旭",
+        "region": "上饶大区",
+        "total_errors": 12,
+        "top_errors": [
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 6
+          },
+          {
+            "error": "KA协议;小货架陈列数量/堆箱陈列数量",
+            "count": 1
+          },
+          {
+            "error": "未完整拍摄",
+            "count": 1
+          },
+          {
+            "error": "套餐促销1填写错误",
+            "count": 1
+          },
+          {
+            "error": "我司冰柜1台纯净度100%填写错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "芦映霞",
+        "region": "南昌大区",
+        "total_errors": 10,
+        "top_errors": [
+          {
+            "error": "有折扣套餐1个填写错误",
+            "count": 3
+          },
+          {
+            "error": "KA协议;小货架陈列数量/堆箱陈列数量",
+            "count": 1
+          },
+          {
+            "error": "重复拍照",
+            "count": 1
+          },
+          {
+            "error": "疑似漏拍其他陈列",
+            "count": 1
+          },
+          {
+            "error": "漏拍端架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡昕睿",
+        "region": "南昌大区",
+        "total_errors": 10,
+        "top_errors": [
+          {
+            "error": "漏拍套餐生动化",
+            "count": 1
+          },
+          {
+            "error": "漏拍端架",
+            "count": 1
+          },
+          {
+            "error": "套餐促销1填写错误",
+            "count": 1
+          },
+          {
+            "error": "疑似漏拍堆箱",
+            "count": 1
+          },
+          {
+            "error": "拍照模糊",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邹聪",
+        "region": "赣州大区",
+        "total_errors": 9,
+        "top_errors": [
+          {
+            "error": "无效检查不规范;签到异常且未按要求拍摄门头",
+            "count": 5
+          },
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 1
+          },
+          {
+            "error": "疑似漏拍主货架",
+            "count": 1
+          },
+          {
+            "error": "漏拍客户自有冰柜",
+            "count": 1
+          },
+          {
+            "error": "无效检查不规范",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "广州支援",
+        "region": "上饶大区",
+        "total_errors": 9,
+        "top_errors": [
+          {
+            "error": "漏拍主货架",
+            "count": 3
+          },
+          {
+            "error": "无效检查不规范",
+            "count": 2
+          },
+          {
+            "error": "漏拍立式货架",
+            "count": 1
+          },
+          {
+            "error": "漏拍立式货架和堆箱",
+            "count": 1
+          },
+          {
+            "error": "漏拍端架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "陈臆元",
+        "region": "赣州大区",
+        "total_errors": 8,
+        "top_errors": [
+          {
+            "error": "无效检查不规范;签到异常且未按要求拍摄门头",
+            "count": 2
+          },
+          {
+            "error": "重复拍照",
+            "count": 1
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          },
+          {
+            "error": "套餐促销1填写错误",
+            "count": 1
+          },
+          {
+            "error": "不规范拍摄，点了下一门且缺角",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "易艳红",
+        "region": "宜春大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "我司冰柜1台纯净度100%填写错误",
+            "count": 2
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          },
+          {
+            "error": "KA协议;中瓶可乐雪碧陈列货道数（冰柜内）",
+            "count": 1
+          },
+          {
+            "error": "货多多1个填写错误",
+            "count": 1
+          },
+          {
+            "error": "漏拍吧台",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "章顺锋",
+        "region": "上饶大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "漏拍货架",
+            "count": 1
+          },
+          {
+            "error": "KA协议;我司冰柜门数（含冰爽站内的）",
+            "count": 1
+          },
+          {
+            "error": "漏拍堆箱",
+            "count": 1
+          },
+          {
+            "error": "KA协议;小货架陈列数量/堆箱陈列数量",
+            "count": 1
+          },
+          {
+            "error": "货多多1个填写错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "徐佩琦",
+        "region": "上饶大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "无效检查不规范;签到异常且未按要求拍摄门头",
+            "count": 4
+          },
+          {
+            "error": "套餐促销1填写错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "刁阳",
+        "region": "赣州大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 1
+          },
+          {
+            "error": "我司冰柜2台纯净度100%填写错误",
+            "count": 1
+          },
+          {
+            "error": "套餐促销1填写错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "谢锦云",
+        "region": "上饶大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "协议错误",
+            "count": 1
+          },
+          {
+            "error": "增投我司冰柜1台纯净度100%填写错误",
+            "count": 1
+          },
+          {
+            "error": "多点1个填写错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "朱永伟",
+        "region": "上饶大区",
+        "total_errors": 2,
+        "top_errors": [
+          {
+            "error": "KA协议;可乐系列产品陈列货道数（冰柜内）",
+            "count": 1
+          },
+          {
+            "error": "无效检查不规范;签到异常且未按要求拍摄门头",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "黄耀财",
+        "region": "赣州大区",
+        "total_errors": 2,
+        "top_errors": [
+          {
+            "error": "签到异常且未按要求拍摄门头",
+            "count": 1
+          },
+          {
+            "error": "我司冰柜1台纯净度100%填写错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "丁豫",
+        "region": "南昌大区",
+        "total_errors": 2,
+        "top_errors": [
+          {
+            "error": "有折扣套餐1个填写错误",
+            "count": 1
+          },
+          {
+            "error": "疑似漏拍主货架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邓敦福",
+        "region": "南昌大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": "不规范拍摄，点了下一门",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡志彬",
+        "region": "上饶大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": "漏拍我司冰柜",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "李双源-南昌",
+        "region": "南昌大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": "疑似漏拍我司冰柜",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "3月": [
+      {
+        "name": "张晓亮-外包",
+        "region": "南昌大区",
+        "total_errors": 199,
+        "top_errors": [
+          {
+            "error": "冰柜库存错误",
+            "count": 53
+          },
+          {
+            "error": "协议错误",
+            "count": 17
+          },
+          {
+            "error": "漏拍堆箱",
+            "count": 12
+          },
+          {
+            "error": "漏拍竞品冰柜",
+            "count": 9
+          },
+          {
+            "error": "KA协议填写错误;我司产品陈列排面数（冰柜内）",
+            "count": 7
+          }
+        ]
+      },
+      {
+        "name": "何慧梅",
+        "region": "赣州大区",
+        "total_errors": 18,
+        "top_errors": [
+          {
+            "error": "正确为货多多1个",
+            "count": 6
+          },
+          {
+            "error": "正确为我司冰柜(层)4层",
+            "count": 3
+          },
+          {
+            "error": "不规范拍摄影响识别",
+            "count": 2
+          },
+          {
+            "error": "跟0480083992拍反了",
+            "count": 1
+          },
+          {
+            "error": "正确为增投我司冰柜1台纯净度100%",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "刘旭",
+        "region": "上饶大区",
+        "total_errors": 16,
+        "top_errors": [
+          {
+            "error": "不规范拍摄影响识别;点了下一门导致识别错误",
+            "count": 6
+          },
+          {
+            "error": "不规范拍摄影响识别",
+            "count": 3
+          },
+          {
+            "error": "正确为增投我司冰柜1台纯净度100%",
+            "count": 2
+          },
+          {
+            "error": "漏拍竞品冰柜",
+            "count": 1
+          },
+          {
+            "error": "正确为汽水星级",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "周棕明",
+        "region": "南昌大区",
+        "total_errors": 15,
+        "top_errors": [
+          {
+            "error": "魔抓吸盘问卷填错",
+            "count": 3
+          },
+          {
+            "error": "协议错误",
+            "count": 2
+          },
+          {
+            "error": "漏拍其他陈列",
+            "count": 1
+          },
+          {
+            "error": "KA协议填写错误;地堆 卡板数",
+            "count": 1
+          },
+          {
+            "error": "KA协议填写错误;地堆生动化活化 卡板数",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "洪凯",
+        "region": "上饶大区",
+        "total_errors": 12,
+        "top_errors": [
+          {
+            "error": "不规范拍摄影响识别",
+            "count": 5
+          },
+          {
+            "error": "冰柜库存错误",
+            "count": 2
+          },
+          {
+            "error": "漏拍竞品主货架",
+            "count": 1
+          },
+          {
+            "error": "漏拍套餐",
+            "count": 1
+          },
+          {
+            "error": "疑似漏拍套餐生动化",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "芦映霞",
+        "region": "南昌大区",
+        "total_errors": 10,
+        "top_errors": [
+          {
+            "error": "正确为汽水星级",
+            "count": 3
+          },
+          {
+            "error": "魔抓吸盘问卷填错",
+            "count": 2
+          },
+          {
+            "error": "主货架拍照过于倾斜，影响铺货识别",
+            "count": 1
+          },
+          {
+            "error": "漏拍其他陈列",
+            "count": 1
+          },
+          {
+            "error": "KA协议填写错误;非我司冰柜货道数",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "杨龙新",
+        "region": "南昌大区",
+        "total_errors": 9,
+        "top_errors": [
+          {
+            "error": "正确为货多多1个",
+            "count": 5
+          },
+          {
+            "error": "正确为货架(层)3层",
+            "count": 2
+          },
+          {
+            "error": "冰柜未通电零散几瓶饮料，正常拍摄",
+            "count": 1
+          },
+          {
+            "error": "正确为我司冰柜(层)4层",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "徐佩琦",
+        "region": "上饶大区",
+        "total_errors": 9,
+        "top_errors": [
+          {
+            "error": "正确为货架(层)2层",
+            "count": 2
+          },
+          {
+            "error": "正确为我司冰柜1台纯净度100%",
+            "count": 2
+          },
+          {
+            "error": "正确为货多多1个",
+            "count": 1
+          },
+          {
+            "error": "正确为汽水星级",
+            "count": 1
+          },
+          {
+            "error": "正确为我司冰柜(层)4层",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡家俊",
+        "region": "南昌大区",
+        "total_errors": 8,
+        "top_errors": [
+          {
+            "error": "正确为我司冰柜1台纯净度100%",
+            "count": 2
+          },
+          {
+            "error": "正确为我司冰柜2台纯净度100%",
+            "count": 2
+          },
+          {
+            "error": "正确为货架(层)2层",
+            "count": 2
+          },
+          {
+            "error": "正确为我司冰柜1台纯净度100%、货架(层)2层、货多多1个",
+            "count": 1
+          },
+          {
+            "error": "正确为汽水星级",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "陈臆元",
+        "region": "赣州大区",
+        "total_errors": 7,
+        "top_errors": [
+          {
+            "error": "拍摄正常无误;点了下一门导致识别错误",
+            "count": 3
+          },
+          {
+            "error": "KA协议填写错误;小货架陈列数量/堆箱陈列数量",
+            "count": 1
+          },
+          {
+            "error": "不规范拍摄影响识别;点了下一门导致识别错误",
+            "count": 1
+          },
+          {
+            "error": "拍摄模糊;点了下一门导致识别错误",
+            "count": 1
+          },
+          {
+            "error": "正确为我司冰柜1台纯净度100%",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "朱永伟",
+        "region": "上饶大区",
+        "total_errors": 7,
+        "top_errors": [
+          {
+            "error": "正确为货多多1个",
+            "count": 2
+          },
+          {
+            "error": "KA协议填写错误;非我司冰柜货道数",
+            "count": 1
+          },
+          {
+            "error": "正确为我司冰柜(层)4层",
+            "count": 1
+          },
+          {
+            "error": "正确为我司冰柜1台纯净度100%",
+            "count": 1
+          },
+          {
+            "error": "KA协议填写错误;货架组数",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "刘丽红",
+        "region": "上饶大区",
+        "total_errors": 7,
+        "top_errors": [
+          {
+            "error": "正确为货多多1个",
+            "count": 2
+          },
+          {
+            "error": "疑似漏拍堆箱",
+            "count": 1
+          },
+          {
+            "error": "正确为货架(层)2层",
+            "count": 1
+          },
+          {
+            "error": "正确为货架(层)2层、货多多1个",
+            "count": 1
+          },
+          {
+            "error": "不规范拍摄影响识别;点了下一门导致识别错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "姜梦佳",
+        "region": "南昌大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "KA协议填写错误;我司冰箱门数",
+            "count": 1
+          },
+          {
+            "error": "正确为增投我司冰柜1台纯净度100%",
+            "count": 1
+          },
+          {
+            "error": "正确为客户自有冰柜1门",
+            "count": 1
+          },
+          {
+            "error": "正确为货架(层)2层",
+            "count": 1
+          },
+          {
+            "error": "不规范拍摄影响识别;点了下一门导致识别错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "章顺锋",
+        "region": "上饶大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "正确为非我司冰柜(层)4层",
+            "count": 2
+          },
+          {
+            "error": "正确为货多多1个",
+            "count": 2
+          },
+          {
+            "error": "正确为货架(层)3层、货多多1个",
+            "count": 1
+          },
+          {
+            "error": "疑似漏拍其他厂商冰柜",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "黄耀财",
+        "region": "赣州大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "正确为我司冰柜(层)4层",
+            "count": 2
+          },
+          {
+            "error": "正确为货架(层)2层",
+            "count": 2
+          },
+          {
+            "error": "赣州市上犹县东山镇建设二路18号正和广场2楼",
+            "count": 1
+          },
+          {
+            "error": "正确为货多多1个",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邹聪",
+        "region": "赣州大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "漏拍立式货架",
+            "count": 2
+          },
+          {
+            "error": "正确为我司冰柜1台纯净度100%",
+            "count": 1
+          },
+          {
+            "error": "正确为货多多1个",
+            "count": 1
+          },
+          {
+            "error": "正确为多点1个",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "张晓亮",
+        "region": "南昌大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "协议错误",
+            "count": 3
+          },
+          {
+            "error": "KA协议填写错误;中瓶可乐数6",
+            "count": 1
+          },
+          {
+            "error": "冰柜层数错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "谢锦云",
+        "region": "上饶大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "KA协议填写错误;地堆 卡板数",
+            "count": 1
+          },
+          {
+            "error": "KA协议填写错误;堆箱箱数",
+            "count": 1
+          },
+          {
+            "error": "KA协议填写错误;货多多个数",
+            "count": 1
+          },
+          {
+            "error": "正确为货架(层)2层",
+            "count": 1
+          },
+          {
+            "error": "正确为增投我司冰柜1台纯净度100%",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "欧阳鹏",
+        "region": "宜春大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "正确为我司冰柜(层)4层",
+            "count": 2
+          },
+          {
+            "error": "正确为我司冰柜2台纯净度100%",
+            "count": 1
+          },
+          {
+            "error": "丰城市剑光街道解放南路叶家井86号",
+            "count": 1
+          },
+          {
+            "error": "正确为我司冰柜1台纯净度100%",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "钟鑫武",
+        "region": "宜春大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "正确为我司冰柜(层)4层",
+            "count": 2
+          },
+          {
+            "error": "正确为我司冰柜1台纯净度100%",
+            "count": 1
+          },
+          {
+            "error": "正确为货多多1个",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡昕睿",
+        "region": "南昌大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "疑似漏拍其他陈列",
+            "count": 2
+          },
+          {
+            "error": "漏拍套餐生动化",
+            "count": 1
+          },
+          {
+            "error": "漏拍其他陈列",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "易艳红",
+        "region": "宜春大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "KA协议填写错误;客户冰柜层数",
+            "count": 1
+          },
+          {
+            "error": "KA协议填写错误;可乐品牌产品陈列货道数（冰柜内）",
+            "count": 1
+          },
+          {
+            "error": "正确为我司冰柜(层)4层",
+            "count": 1
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邬琦",
+        "region": "宜春大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "漏拍冷风柜",
+            "count": 1
+          },
+          {
+            "error": "正确为我司冰柜2台纯净度100%",
+            "count": 1
+          },
+          {
+            "error": "正确为货多多1个",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡志彬",
+        "region": "上饶大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "正确为货架(层)2层、我司冰柜1台纯净度100%",
+            "count": 1
+          },
+          {
+            "error": "正确为汽水星级",
+            "count": 1
+          },
+          {
+            "error": "正确为货多多1个",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邓敦福",
+        "region": "南昌大区",
+        "total_errors": 2,
+        "top_errors": [
+          {
+            "error": "吧台上我司产品都被遮挡住了",
+            "count": 1
+          },
+          {
+            "error": "正确为货多多1个",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "4月": [
+      {
+        "name": "伍洋",
+        "region": "南昌大区",
+        "total_errors": 54,
+        "top_errors": [
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 11
+          },
+          {
+            "error": "主货架场景漏拍",
+            "count": 5
+          },
+          {
+            "error": "中瓶可口可乐原味排面数（冰柜内）",
+            "count": 5
+          },
+          {
+            "error": "我司冰柜层数填错",
+            "count": 4
+          },
+          {
+            "error": "中瓶可乐雪碧陈列货道数（冰柜内）",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "李翔",
+        "region": "赣州大区",
+        "total_errors": 53,
+        "top_errors": [
+          {
+            "error": "主货架场景漏拍",
+            "count": 17
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 10
+          },
+          {
+            "error": "未按标准拍摄门头",
+            "count": 4
+          },
+          {
+            "error": "主货架场景漏拍、二次陈列场景漏拍",
+            "count": 3
+          },
+          {
+            "error": "端架场景漏拍",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "邓义涛",
+        "region": "赣州大区",
+        "total_errors": 49,
+        "top_errors": [
+          {
+            "error": "主货架场景漏拍",
+            "count": 17
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 15
+          },
+          {
+            "error": "主货架场景漏拍、二次陈列场景漏拍",
+            "count": 3
+          },
+          {
+            "error": "货多多协议填错",
+            "count": 2
+          },
+          {
+            "error": "货多多协议填错;主货架场景漏拍",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "包德炳",
+        "region": "上饶大区",
+        "total_errors": 25,
+        "top_errors": [
+          {
+            "error": "线上套餐未按标准上传",
+            "count": 9
+          },
+          {
+            "error": "货架层数填错",
+            "count": 2
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 2
+          },
+          {
+            "error": "中瓶可乐雪碧陈列货道数（冰柜内）",
+            "count": 2
+          },
+          {
+            "error": "魔爪系列产品陈列货道数（冰柜内）",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "马里金",
+        "region": "赣州大区",
+        "total_errors": 16,
+        "top_errors": [
+          {
+            "error": "货架层数填错",
+            "count": 4
+          },
+          {
+            "error": "我司冰柜层数填错",
+            "count": 3
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 2
+          },
+          {
+            "error": "汽水星级填错",
+            "count": 2
+          },
+          {
+            "error": "协议错误",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "杨龙新",
+        "region": "南昌大区",
+        "total_errors": 16,
+        "top_errors": [
+          {
+            "error": ";;拍摄不规范导致无法识别",
+            "count": 3
+          },
+          {
+            "error": "漏拍货架",
+            "count": 2
+          },
+          {
+            "error": ";不规范拍照",
+            "count": 2
+          },
+          {
+            "error": "未按标准拍摄门头",
+            "count": 2
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "陈小军",
+        "region": "上饶大区",
+        "total_errors": 15,
+        "top_errors": [
+          {
+            "error": "主货架场景漏拍",
+            "count": 2
+          },
+          {
+            "error": "冰柜纯净度填错",
+            "count": 2
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 2
+          },
+          {
+            "error": "我司冰柜门数（含冰爽站内的）",
+            "count": 2
+          },
+          {
+            "error": "漏拍立式货架",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "张晓亮",
+        "region": "南昌大区",
+        "total_errors": 14,
+        "top_errors": [
+          {
+            "error": "协议错误",
+            "count": 3
+          },
+          {
+            "error": "未按标准拍摄门头",
+            "count": 2
+          },
+          {
+            "error": "汽水星级填错",
+            "count": 2
+          },
+          {
+            "error": "端架协议填错",
+            "count": 1
+          },
+          {
+            "error": "我司冰柜层数填错",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "冯方方",
+        "region": "上饶大区",
+        "total_errors": 14,
+        "top_errors": [
+          {
+            "error": "主货架场景漏拍",
+            "count": 4
+          },
+          {
+            "error": "不规范拍照导致识别问题,排面影响较大",
+            "count": 4
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 2
+          },
+          {
+            "error": "竞品冰柜漏拍、二次陈列场景漏拍",
+            "count": 1
+          },
+          {
+            "error": "不规范拍照",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "洪凯",
+        "region": "上饶大区",
+        "total_errors": 13,
+        "top_errors": [
+          {
+            "error": ";不规范拍照;拍摄不规范导致无法识别",
+            "count": 3
+          },
+          {
+            "error": "未按标准拍摄门头",
+            "count": 3
+          },
+          {
+            "error": "冰柜纯净度填错",
+            "count": 2
+          },
+          {
+            "error": "我司冰柜层数填错",
+            "count": 1
+          },
+          {
+            "error": ";不规范拍照",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "舒炎",
+        "region": "上饶大区",
+        "total_errors": 12,
+        "top_errors": [
+          {
+            "error": "主货架场景漏拍",
+            "count": 4
+          },
+          {
+            "error": "冰柜缺角",
+            "count": 2
+          },
+          {
+            "error": "我司冰柜层数填错",
+            "count": 1
+          },
+          {
+            "error": "漏拍KO货架",
+            "count": 1
+          },
+          {
+            "error": "竞品冰柜漏拍",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邹聪",
+        "region": "南昌大区",
+        "total_errors": 10,
+        "top_errors": [
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 3
+          },
+          {
+            "error": "有折扣套餐填错",
+            "count": 1
+          },
+          {
+            "error": "二次陈列场景漏拍、客户自有冰柜/冷风柜漏拍",
+            "count": 1
+          },
+          {
+            "error": "主货架场景漏拍",
+            "count": 1
+          },
+          {
+            "error": ";不规范拍照;拍摄不规范导致无法识别",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "周棕明",
+        "region": "南昌大区",
+        "total_errors": 9,
+        "top_errors": [
+          {
+            "error": "主货架场景漏拍",
+            "count": 3
+          },
+          {
+            "error": "货架层数填错",
+            "count": 2
+          },
+          {
+            "error": "冰柜纯净度填错",
+            "count": 2
+          },
+          {
+            "error": "套餐促销填错",
+            "count": 1
+          },
+          {
+            "error": "疑似漏拍收银台陈列",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "方海铸",
+        "region": "赣州大区",
+        "total_errors": 7,
+        "top_errors": [
+          {
+            "error": "主货架场景漏拍",
+            "count": 3
+          },
+          {
+            "error": "协议错误",
+            "count": 2
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 1
+          },
+          {
+            "error": "货架层数填错",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "芦映霞",
+        "region": "南昌大区",
+        "total_errors": 7,
+        "top_errors": [
+          {
+            "error": "未按标准拍摄门头",
+            "count": 2
+          },
+          {
+            "error": ";不规范拍照;拍摄不规范导致无法识别",
+            "count": 1
+          },
+          {
+            "error": "疑似漏拍冷风柜",
+            "count": 1
+          },
+          {
+            "error": "冷风柜太倾斜识别不完全;",
+            "count": 1
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "徐佩琦",
+        "region": "上饶大区",
+        "total_errors": 7,
+        "top_errors": [
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 3
+          },
+          {
+            "error": "主货架场景漏拍",
+            "count": 1
+          },
+          {
+            "error": "主货架场景漏拍、端架场景漏拍",
+            "count": 1
+          },
+          {
+            "error": "主货架场景漏拍、竞品冰柜漏拍、二次陈列场景漏拍",
+            "count": 1
+          },
+          {
+            "error": "咖啡系列产品陈列货道数（冰柜内）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "陈臆元",
+        "region": "赣州大区",
+        "total_errors": 7,
+        "top_errors": [
+          {
+            "error": "套餐促销填错",
+            "count": 2
+          },
+          {
+            "error": "不规范拍照",
+            "count": 1
+          },
+          {
+            "error": ";不规范拍照;拍摄不规范导致无法识别",
+            "count": 1
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 1
+          },
+          {
+            "error": ";;拍摄不规范导致无法识别",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "姜梦佳",
+        "region": "南昌大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "漏拍主货架",
+            "count": 2
+          },
+          {
+            "error": "我司冰柜门数（含冰爽站内的）",
+            "count": 1
+          },
+          {
+            "error": "主货架场景漏拍",
+            "count": 1
+          },
+          {
+            "error": "冰爽站个数",
+            "count": 1
+          },
+          {
+            "error": "未按标准拍摄门头",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "欧阳鹏",
+        "region": "宜春大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": ";不规范拍照",
+            "count": 2
+          },
+          {
+            "error": "不规范拍照",
+            "count": 2
+          },
+          {
+            "error": "我司冰柜层数填错",
+            "count": 1
+          },
+          {
+            "error": "冰柜纯净度填错",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "何慧梅",
+        "region": "赣州大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "汽水星级填错",
+            "count": 1
+          },
+          {
+            "error": "增投填错",
+            "count": 1
+          },
+          {
+            "error": "端架 个数",
+            "count": 1
+          },
+          {
+            "error": "主货架场景漏拍",
+            "count": 1
+          },
+          {
+            "error": ";不规范拍照;拍摄不规范导致无法识别",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "刘丽红",
+        "region": "上饶大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "不规范拍照",
+            "count": 4
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡昕睿",
+        "region": "南昌大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "客户冰柜层数",
+            "count": 2
+          },
+          {
+            "error": "漏拍收银台陈列",
+            "count": 1
+          },
+          {
+            "error": "中瓶可口可乐原味排面数（冰柜内）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "谢锦云",
+        "region": "上饶大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "汽水星级填错",
+            "count": 1
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 1
+          },
+          {
+            "error": "非我司冰柜层数",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "易艳红",
+        "region": "宜春大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": ";不规范拍照",
+            "count": 1
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          },
+          {
+            "error": "漏拍竞品冰柜",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "刁阳",
+        "region": "赣州大区",
+        "total_errors": 3,
+        "top_errors": [
+          {
+            "error": "主货架场景漏拍",
+            "count": 1
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 1
+          },
+          {
+            "error": "主货架场景漏拍、端架场景漏拍",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邬琦",
+        "region": "宜春大区",
+        "total_errors": 2,
+        "top_errors": [
+          {
+            "error": "场景归类错误",
+            "count": 1
+          },
+          {
+            "error": "地堆 卡板数",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "黄耀财",
+        "region": "赣州大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": "我司冰柜层数填错;",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "章顺锋",
+        "region": "上饶大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": "漏拍多点",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡志彬",
+        "region": "上饶大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": ";不规范拍照",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "5月": [
+      {
+        "name": "邓义涛",
+        "region": "赣州大区",
+        "total_errors": 89,
+        "top_errors": [
+          {
+            "error": "违规检查;违规操作",
+            "count": 27
+          },
+          {
+            "error": "协议错误",
+            "count": 9
+          },
+          {
+            "error": "漏拍客户自有冰柜",
+            "count": 7
+          },
+          {
+            "error": "二陈漏拍",
+            "count": 4
+          },
+          {
+            "error": "主货架漏拍",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "伍洋",
+        "region": "南昌大区",
+        "total_errors": 80,
+        "top_errors": [
+          {
+            "error": "套餐填写错误;",
+            "count": 12
+          },
+          {
+            "error": "主货架环境照与IR识别照片拍反。",
+            "count": 8
+          },
+          {
+            "error": "餐饮铺货点错",
+            "count": 6
+          },
+          {
+            "error": "协议错误",
+            "count": 5
+          },
+          {
+            "error": "不规范查店",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "李翔",
+        "region": "赣州大区",
+        "total_errors": 69,
+        "top_errors": [
+          {
+            "error": "协议错误",
+            "count": 8
+          },
+          {
+            "error": "违规检查;违规操作",
+            "count": 6
+          },
+          {
+            "error": "KA协议填错;我司冰箱门数",
+            "count": 4
+          },
+          {
+            "error": "KA协议填错;客户冰柜层数",
+            "count": 4
+          },
+          {
+            "error": "汽水星级填写错误&套餐填写错误;",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "马里金",
+        "region": "赣州大区",
+        "total_errors": 58,
+        "top_errors": [
+          {
+            "error": "违规检查;违规操作",
+            "count": 31
+          },
+          {
+            "error": "KA协议填错;客户冰柜层数",
+            "count": 5
+          },
+          {
+            "error": "协议错误",
+            "count": 4
+          },
+          {
+            "error": "二陈漏拍",
+            "count": 4
+          },
+          {
+            "error": "不规范拍照",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "朱梃树",
+        "region": "赣州大区",
+        "total_errors": 53,
+        "top_errors": [
+          {
+            "error": "违规检查;违规操作",
+            "count": 18
+          },
+          {
+            "error": "违规检查;不规范拍照;疑似违规;违规操作",
+            "count": 12
+          },
+          {
+            "error": "主货架场景漏拍",
+            "count": 5
+          },
+          {
+            "error": "主货架漏拍",
+            "count": 3
+          },
+          {
+            "error": "协议错误",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "刘海林",
+        "region": "赣州大区",
+        "total_errors": 51,
+        "top_errors": [
+          {
+            "error": "竞品冰柜漏拍",
+            "count": 9
+          },
+          {
+            "error": "主货架漏拍",
+            "count": 7
+          },
+          {
+            "error": "二次陈列场景漏拍",
+            "count": 4
+          },
+          {
+            "error": "协议错误",
+            "count": 3
+          },
+          {
+            "error": "我司冰柜填写错误;",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "name": "赵静",
+        "region": "宜春大区",
+        "total_errors": 36,
+        "top_errors": [
+          {
+            "error": "竞品冰柜漏拍",
+            "count": 10
+          },
+          {
+            "error": "KA协议填错;客户冰柜层数",
+            "count": 6
+          },
+          {
+            "error": "违规检查;违规操作",
+            "count": 4
+          },
+          {
+            "error": "漏拍竟品冰柜",
+            "count": 4
+          },
+          {
+            "error": "协议错误",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "王炳坤",
+        "region": "赣州大区",
+        "total_errors": 36,
+        "top_errors": [
+          {
+            "error": "KA协议填错;客户冰柜层数",
+            "count": 5
+          },
+          {
+            "error": "KA协议填错;客户冰柜门数",
+            "count": 2
+          },
+          {
+            "error": "主货架场景漏拍",
+            "count": 2
+          },
+          {
+            "error": "我司冰柜填写错误;",
+            "count": 2
+          },
+          {
+            "error": "不规范无效",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "肖南平",
+        "region": "赣州大区",
+        "total_errors": 34,
+        "top_errors": [
+          {
+            "error": "协议错误",
+            "count": 3
+          },
+          {
+            "error": "我司冰柜填写错误;",
+            "count": 2
+          },
+          {
+            "error": "KA协议填错;我司冰柜门数（含冰爽站内的）",
+            "count": 2
+          },
+          {
+            "error": "漏拍货架",
+            "count": 2
+          },
+          {
+            "error": "漏拍端架",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "陈小军",
+        "region": "上饶大区",
+        "total_errors": 33,
+        "top_errors": [
+          {
+            "error": "套餐填写错误;",
+            "count": 11
+          },
+          {
+            "error": "不规范查店",
+            "count": 4
+          },
+          {
+            "error": "KA协议填错;客户冰柜层数",
+            "count": 3
+          },
+          {
+            "error": "不规范拍照",
+            "count": 2
+          },
+          {
+            "error": "漏拍堆箱",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "朱春武",
+        "region": "上饶大区",
+        "total_errors": 27,
+        "top_errors": [
+          {
+            "error": "价格沟通错误",
+            "count": 12
+          },
+          {
+            "error": "套餐填写错误;",
+            "count": 7
+          },
+          {
+            "error": "拍错模块，地堆拍成包柱;拍错模块，地堆拍成包柱KA协议填错",
+            "count": 1
+          },
+          {
+            "error": "KA协议填错;无糖系列产品陈列货道数（冰柜内）",
+            "count": 1
+          },
+          {
+            "error": "协议错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "张晓亮",
+        "region": "赣州大区",
+        "total_errors": 26,
+        "top_errors": [
+          {
+            "error": "违规检查;违规操作",
+            "count": 15
+          },
+          {
+            "error": "协议错误",
+            "count": 3
+          },
+          {
+            "error": "KA协议填错;我司冰柜门数（含冰爽站内的）",
+            "count": 2
+          },
+          {
+            "error": "客户冰柜未拍全",
+            "count": 1
+          },
+          {
+            "error": "KA协议填错;客户冰柜层数",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "包德炳",
+        "region": "宜春大区",
+        "total_errors": 24,
+        "top_errors": [
+          {
+            "error": "不规范查店",
+            "count": 4
+          },
+          {
+            "error": "违规检查;违规操作",
+            "count": 3
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 3
+          },
+          {
+            "error": "协议错误",
+            "count": 3
+          },
+          {
+            "error": "漏拍客户自有冰柜",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "周棕明",
+        "region": "南昌大区",
+        "total_errors": 23,
+        "top_errors": [
+          {
+            "error": "违规检查;违规操作",
+            "count": 10
+          },
+          {
+            "error": "不规范查店",
+            "count": 2
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          },
+          {
+            "error": "漏拍堆箱",
+            "count": 1
+          },
+          {
+            "error": "漏拍多点;漏拍多点KA协议填错",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "夏勍炜",
+        "region": "赣州大区",
+        "total_errors": 21,
+        "top_errors": [
+          {
+            "error": "我司冰柜填写错误;",
+            "count": 5
+          },
+          {
+            "error": "协议错误",
+            "count": 4
+          },
+          {
+            "error": "不规范查店",
+            "count": 3
+          },
+          {
+            "error": "套餐填写错误;",
+            "count": 2
+          },
+          {
+            "error": "KA协议填错;客户冰柜层数",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "谢锦云",
+        "region": "上饶大区",
+        "total_errors": 12,
+        "top_errors": [
+          {
+            "error": "KA协议填错;KO冰柜台数",
+            "count": 3
+          },
+          {
+            "error": "不规范查店",
+            "count": 2
+          },
+          {
+            "error": "KA协议填错;SKU个数",
+            "count": 1
+          },
+          {
+            "error": "KA协议填错;货架层数",
+            "count": 1
+          },
+          {
+            "error": "KA协议填错;客户自有冰柜门数",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "姜梦佳",
+        "region": "南昌大区",
+        "total_errors": 12,
+        "top_errors": [
+          {
+            "error": "不规范查店",
+            "count": 3
+          },
+          {
+            "error": "KA协议填错;茶系列产品陈列货道数（冰柜内/冷风柜内）",
+            "count": 2
+          },
+          {
+            "error": "漏拍冷风柜",
+            "count": 1
+          },
+          {
+            "error": "照片拍倒了，识别不到",
+            "count": 1
+          },
+          {
+            "error": "漏拍客户自有冰柜",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "袁国裔",
+        "region": "宜春大区",
+        "total_errors": 12,
+        "top_errors": [
+          {
+            "error": "违规检查;违规操作",
+            "count": 3
+          },
+          {
+            "error": "协议错误",
+            "count": 2
+          },
+          {
+            "error": "协议错误，套餐错误",
+            "count": 1
+          },
+          {
+            "error": "冰柜库存错误",
+            "count": 1
+          },
+          {
+            "error": "立式货架漏拍",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "冯方方",
+        "region": "上饶大区",
+        "total_errors": 7,
+        "top_errors": [
+          {
+            "error": "协议错误",
+            "count": 3
+          },
+          {
+            "error": "协议错误，冰柜层数错误",
+            "count": 2
+          },
+          {
+            "error": "模块错误",
+            "count": 1
+          },
+          {
+            "error": "我司冰柜填写错误;",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "芦映霞",
+        "region": "南昌大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "不规范查店",
+            "count": 2
+          },
+          {
+            "error": "不规范拍照",
+            "count": 2
+          },
+          {
+            "error": "KA协议填错;客户自有冰柜门数",
+            "count": 1
+          },
+          {
+            "error": "漏拍ko冰柜",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "舒炎",
+        "region": "上饶大区",
+        "total_errors": 6,
+        "top_errors": [
+          {
+            "error": "不规范拍照",
+            "count": 1
+          },
+          {
+            "error": "竞品冰柜漏拍",
+            "count": 1
+          },
+          {
+            "error": "冰柜缺角",
+            "count": 1
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          },
+          {
+            "error": "KA协议填错;中瓶汽水集中陈列排面数（冰柜内）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "李总-支援",
+        "region": "赣州大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "冰柜缺角",
+            "count": 2
+          },
+          {
+            "error": "KA协议填错;魔爪系列产品陈列货道数（冰柜内）",
+            "count": 1
+          },
+          {
+            "error": "冰柜缺角;冰柜缺角KA协议填错",
+            "count": 1
+          },
+          {
+            "error": "KA协议填错;无糖系列产品陈列货道数（冰柜内）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "刘丽红",
+        "region": "上饶大区",
+        "total_errors": 5,
+        "top_errors": [
+          {
+            "error": "KO冰柜漏拍",
+            "count": 1
+          },
+          {
+            "error": "竞品冰柜漏拍",
+            "count": 1
+          },
+          {
+            "error": "漏拍端架",
+            "count": 1
+          },
+          {
+            "error": "场景错误",
+            "count": 1
+          },
+          {
+            "error": "不规范拍照",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡昕睿",
+        "region": "南昌大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "不规范无效",
+            "count": 1
+          },
+          {
+            "error": "漏拍地堆",
+            "count": 1
+          },
+          {
+            "error": "漏拍其他陈列",
+            "count": 1
+          },
+          {
+            "error": "疑似漏拍立式货架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "洪凯",
+        "region": "上饶大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "不规范拍照",
+            "count": 2
+          },
+          {
+            "error": "KA协议填错;我司冰箱门数",
+            "count": 1
+          },
+          {
+            "error": "漏拍主货架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "章顺锋",
+        "region": "上饶大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "不规范查店",
+            "count": 3
+          },
+          {
+            "error": "漏拍端架",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "简驰",
+        "region": "宜春大区",
+        "total_errors": 4,
+        "top_errors": [
+          {
+            "error": "协议错误，漏拍生动化",
+            "count": 2
+          },
+          {
+            "error": "我司冰柜填写错误;协议错误",
+            "count": 1
+          },
+          {
+            "error": "KA协议填错;协议错误",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "胡志彬",
+        "region": "上饶大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": "不规范查店",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "邓敦福",
+        "region": "南昌大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": "不规范拍照",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "钟鑫武",
+        "region": "宜春大区",
+        "total_errors": 1,
+        "top_errors": [
+          {
+            "error": "漏拍冰柜照片",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}
