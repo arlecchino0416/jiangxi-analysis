@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>RED Y26年P6执行回顾</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:#f8fafc;color:#1e293b;overflow-x:hidden}
+.container{max-width:1260px;margin:0 auto;padding:16px}
+h1{font-size:26px;font-weight:700;text-align:center;padding:24px 0 8px;color:#0f172a}
+h2{font-size:18px;font-weight:600;color:#0f172a;margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid #2563eb}
+h3{font-size:15px;font-weight:600;color:#475569;margin:16px 0 8px}
+h4{font-size:14px;font-weight:600;color:#475569;margin:12px 0 6px}
+.subtitle{text-align:center;color:#64748b;font-size:14px;margin-bottom:20px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin-bottom:16px}
+.kpi-card{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:14px;text-align:center;transition:all .2s}
+.kpi-card:hover{box-shadow:0 4px 12px rgba(37,99,235,0.12);transform:translateY(-2px)}
+.kpi-card .label{font-size:11px;color:#64748b;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-card .value{font-size:22px;font-weight:700;color:#1e293b}
+.kpi-card .delta{font-size:12px;margin-top:2px}
+.kpi-card .value.green{color:#059669}
+.kpi-card .value.yellow{color:#d97706}
+.kpi-card .value.red{color:#dc2626}
+.kpi-card .value.blue{color:#2563eb}
+.delta.down{color:#059669}
+.delta.up{color:#dc2626}
+.insight{background:#f0f4ff;border-left:3px solid #2563eb;border-radius:4px;padding:10px 14px;margin:10px 0;font-size:13px;color:#334155;line-height:1.6}
+.insight strong{color:#2563eb}
+.insight.warn{background:#fef2f2;border-left-color:#dc2626}
+.insight.warn strong{color:#dc2626}
+.insight.good{background:#f0fdf4;border-left-color:#059669}
+.insight.good strong{color:#059669}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e2e8f0;border-radius:6px;overflow:hidden;font-size:12px;margin:8px 0 12px}
+th{background:#f1f5f9;padding:7px 5px;text-align:center;font-weight:600;color:#475569;border-bottom:1px solid #e2e8f0;white-space:nowrap;font-size:11px}
+td{padding:5px;text-align:center;border-bottom:1px solid #f1f5f9;font-size:12px}
+tr:last-child td{border-bottom:none}
+tr:hover{background:#f8fafc}
+.btn-chart{display:inline-block;padding:5px 12px;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid #2563eb;color:#2563eb;background:#fff;margin:4px;user-select:none}
+.btn-chart:hover{background:#2563eb;color:#fff}
+.ch-panel{display:none;background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:16px;margin:8px 0 12px;overflow-x:auto}
+.ch-panel.show{display:block}
+.nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:8px 0;margin-bottom:16px;text-align:center;position:sticky;top:0;z-index:100}
+.nav a{display:inline-block;padding:5px 10px;margin:2px;font-size:12px;color:#2563eb;text-decoration:none;border-radius:4px}
+.nav a:hover{background:#dbeafe}
+.bar-chart{margin:4px 0}
+.bar-row{display:flex;align-items:center;margin:3px 0;font-size:12px}
+.bar-label{width:120px;flex-shrink:0;text-align:right;padding-right:8px;color:#475569;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{flex:1;height:20px;background:#f1f5f9;border-radius:4px;position:relative;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding:0 6px;font-size:10px;color:#fff;font-weight:600;min-width:24px;white-space:nowrap;transition:width .4s ease}
+.bar-val{width:50px;flex-shrink:0;padding-left:8px;font-weight:600;font-size:12px;color:#334155;text-align:left}
+
+/* Side-by-side comparison bars */
+.cmp-row-v2{display:flex;align-items:center;margin:6px 0;font-size:12px}
+.cmp-label{width:110px;flex-shrink:0;text-align:right;padding-right:10px;color:#475569;font-weight:500}
+.cmp-pair{flex:1;display:flex;flex-direction:column;gap:2px}
+.cmp-bar-wrap{display:flex;align-items:center;height:22px}
+.cmp-bar-tag{width:28px;flex-shrink:0;font-size:10px;font-weight:700;text-align:center;border-radius:3px;margin-right:6px;padding:2px 0;color:#fff}
+.cmp-bar-tag.p5{background:#94a3b8}
+.cmp-bar-tag.p6{background:#2563eb}
+.cmp-bar-bg{flex:1;height:100%;background:#f1f5f9;border-radius:3px;overflow:hidden;position:relative}
+.cmp-bar-fill{height:100%;border-radius:3px;display:flex;align-items:center;padding:0 6px;font-size:10px;color:#fff;font-weight:600;min-width:28px}
+.cmp-bar-fill.p5{background:#cbd5e1}
+.cmp-bar-fill.p6{background:#3b82f6}
+.cmp-delta-cell{width:65px;flex-shrink:0;padding-left:8px;font-weight:700;font-size:12px;text-align:left}
+.cmp-delta-cell.improve{color:#059669}
+.cmp-delta-cell.worse{color:#dc2626}
+
+.ring-chart{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.ring-legend{font-size:12px;line-height:1.8}
+.ring-legend .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:12px}
+.summary-card{border-radius:8px;padding:16px;text-align:left;border:1px solid #e2e8f0}
+.summary-card .s-title{font-size:16px;font-weight:700;margin-bottom:8px}
+.summary-card ul{list-style:none;font-size:13px;line-height:1.8;color:#334155;padding:0}
+.summary-card ul li{padding:2px 0}
+.text-sm{font-size:12px;color:#64748b}
+.chart-title{font-weight:600;font-size:14px;margin-bottom:8px;color:#1e293b}
+.tab-bar{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}
+.tab-btn{padding:6px 16px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;font-size:13px;cursor:pointer;color:#475569;transition:all .2s}
+.tab-btn:hover,.tab-btn.active{background:#2563eb;color:#fff;border-color:#2563eb}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.cmp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0}
+.cmp-card{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px;text-align:center}
+.cmp-card .cmp-label{font-size:11px;color:#64748b;margin-bottom:4px}
+.cmp-card .cmp-row{display:flex;justify-content:center;align-items:baseline;gap:8px;margin:6px 0}
+.cmp-card .cmp-val{font-size:20px;font-weight:700}
+.cmp-card .cmp-arrow{font-size:14px;color:#94a3b8}
+.cmp-card .cmp-diff{font-size:13px;font-weight:600}
+@media(max-width:640px){
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .cmp-label{width:70px;font-size:11px}
+  .nav a{font-size:11px;padding:4px 6px}
+  .cmp-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<nav class="nav">
+<a href="#s1">总览</a>
+<a href="#s2">P5对比</a>
+<a href="#s3">日进度</a>
+<a href="#s4">异常门店</a>
+<a href="#s5">餐饮错配</a>
+<a href="#s6">南昌区</a>
+<a href="#s7">赣州区</a>
+<a href="#s8">上饶区</a>
+<a href="#s9">宜春区</a>
+<a href="#s10">QC正确率</a>
+<a href="#s11">培训总结</a>
+</nav>
+
+<div id="s1">
+<h1>江西RED Y26年P6执行回顾</h1>
+<p class="subtitle">Spar China &mdash; July 12th, 2026</p>
+<div class="kpi-grid">
+<div class="kpi-card"><div class="label">拜访总量</div><div class="value blue">24,852</div><div class="delta" style="color:#64748b">P5: 23,019</div></div>
+<div class="kpi-card"><div class="label">完成率</div><div class="value green">100.00%</div><div class="delta down">P5:99.83% &uarr;+0.17pt</div></div>
+<div class="kpi-card"><div class="label">无效门店</div><div class="value yellow">1,777</div><div class="delta down">P5:2,433 &darr;-656</div></div>
+<div class="kpi-card"><div class="label">无效率</div><div class="value red">7.15%</div><div class="delta down">&darr;-3.48pt (32.7%)</div></div>
+<div class="kpi-card"><div class="label">抽检正确率</div><div class="value green">97.35%</div><div class="delta">QC抽检15,347家</div></div>
+</div>
+<div class="insight"><strong>核心结论：</strong>计划/实际完成 24,852 家，完成率 100.00%。无效 1,777 家，无效率 7.15%，较5月 10.63% 显著下降 3.48 个百分点。特殊场所无效从 432 家降至 72 家（&darr;83%），前端剔除效果显著。<br><strong>无效率偏高区域 TOP3：</strong>南昌IC事业部 10.73% | 南昌东区域 9.79% | 上饶区域 9.64%</div>
+<h2>各区域完成情况</h2>
+<table><thead><tr><th>区域</th><th>店数</th><th>完成店数</th><th>完成率</th><th>无效数</th><th>无效率</th></tr></thead><tbody><tr><td>抚州区域</td><td>2,425</td><td>2,425</td><td>100.00%</td><td>154</td><td>6.35%</td></tr><tr><td>赣州区域</td><td>3,146</td><td>3,146</td><td>100.00%</td><td>156</td><td>4.96%</td></tr><tr><td>赣西区域</td><td>3,732</td><td>3,732</td><td>100.00%</td><td>203</td><td>5.44%</td></tr><tr><td>重点客户部</td><td>713</td><td>713</td><td>100.00%</td><td>45</td><td>6.31%</td></tr><tr><td>南昌IC事业部</td><td>634</td><td>634</td><td>100.00%</td><td>68</td><td>10.73%</td></tr><tr><td>南昌东区域</td><td>3,002</td><td>3,002</td><td>100.00%</td><td>294</td><td>9.79%</td></tr><tr><td>南昌西区域</td><td>2,828</td><td>2,828</td><td>100.00%</td><td>241</td><td>8.52%</td></tr><tr><td>九江区域</td><td>2,411</td><td>2,411</td><td>100.00%</td><td>91</td><td>3.77%</td></tr><tr><td>上饶区域</td><td>3,257</td><td>3,257</td><td>100.00%</td><td>314</td><td>9.64%</td></tr><tr><td>吉安区域</td><td>2,683</td><td>2,683</td><td>100.00%</td><td>211</td><td>7.86%</td></tr><tr><td>合计</td><td>24,852</td><td>24,852</td><td>100.00%</td><td>1,777</td><td>7.15%</td></tr></tbody></table>
+<h2>各区域无效率排行</h2>
+<div class="insight">全省完成率 100.00%，所有区域均达标。重点关注无效率偏高的区域。</div>
+<div><span class="btn-chart" onclick="toggleChart('chart-completion')">&#x1F4CA; 无效率横条对比</span></div>
+<div id="chart-completion" class="ch-panel show">
+  <div class="chart-title">无效率排行</div>
+  <div class="bar-chart" id="bar-completion"></div>
+</div>
+</div>
+
+<div id="s2">
+<h2>P5 vs P6 趋势对比</h2>
+<div class="insight good"><strong>改善亮点：</strong>6月无效率 7.15% 较 5月 10.63% 下降 3.48pt（&darr;32.7%）。特殊场所无效从 432&rarr;72（&darr;83.3%），前端SOP剔除见成效。日进度从月末冲刺模式转变为均衡分布。P5曾有 135 家违规判定未完成，P6清零。</div>
+<div class="cmp-grid">
+<div class="cmp-card"><div class="cmp-label">完成率</div><div class="cmp-row"><span class="cmp-val" style="color:#2563eb">99.83%</span><span class="cmp-arrow">&rarr;</span><span class="cmp-val" style="color:#059669">100.00%</span></div><div class="cmp-diff" style="color:#059669">&uarr; +0.17pt</div></div>
+<div class="cmp-card"><div class="cmp-label">无效率</div><div class="cmp-row"><span class="cmp-val" style="color:#dc2626">10.63%</span><span class="cmp-arrow">&rarr;</span><span class="cmp-val" style="color:#2563eb">7.15%</span></div><div class="cmp-diff" style="color:#059669">&darr; -3.48pt</div></div>
+<div class="cmp-card"><div class="cmp-label">无效门店总数</div><div class="cmp-row"><span class="cmp-val" style="color:#d97706">2,433</span><span class="cmp-arrow">&rarr;</span><span class="cmp-val" style="color:#2563eb">1,777</span></div><div class="cmp-diff" style="color:#059669">&darr; -656家</div></div>
+<div class="cmp-card"><div class="cmp-label">特殊场所无效</div><div class="cmp-row"><span class="cmp-val" style="color:#dc2626">432</span><span class="cmp-arrow">&rarr;</span><span class="cmp-val" style="color:#059669">72</span></div><div class="cmp-diff" style="color:#059669">&darr; -83.3%</div></div>
+<div class="cmp-card"><div class="cmp-label">违规判定未完成</div><div class="cmp-row"><span class="cmp-val" style="color:#dc2626">135</span><span class="cmp-arrow">&rarr;</span><span class="cmp-val" style="color:#059669">0</span></div><div class="cmp-diff" style="color:#059669">&#x2713; 清零</div></div>
+<div class="cmp-card"><div class="cmp-label">计划数量增长</div><div class="cmp-row"><span class="cmp-val" style="color:#2563eb">23,019</span><span class="cmp-arrow">&rarr;</span><span class="cmp-val" style="color:#2563eb">24,852</span></div><div class="cmp-diff" style="color:#2563eb">&uarr; +1,833家</div></div>
+</div>
+
+<h3>各区域无效率变化</h3>
+<div class="insight">P5 灰色条 vs P6 蓝色条，并排对比每个区域的无效率变化。右侧标注变化幅度。上饶区域改善最显著（&darr;5.09pt），整体十区九降。</div>
+<div><span class="btn-chart" onclick="toggleChart('chart-waterfall')">&#x1F4CA; 无效率并排对比图</span></div>
+<div id="chart-waterfall" class="ch-panel">
+  <div class="chart-title">各区域 P5 vs P6 无效率对比（按改善幅度排序）</div>
+  <div id="waterfall-bars"></div>
+</div>
+
+<h3>无效原因结构变化</h3>
+<div class="insight warn"><strong>关注点：</strong>锁门/临时关门从 P5 的 1,211 家（49.77%）降至 P6 的 1,023 家（57.57%），绝对数下降 188 家，但占比逆升——其他原因快速下降后锁门成为更集中的矛盾。下一步需加强锁门原因的二次复核。</div>
+<div><span class="btn-chart" onclick="toggleChart('chart-reason-cmp')">&#x1F4CA; 无效原因变化对比</span></div>
+<div id="chart-reason-cmp" class="ch-panel">
+  <div class="chart-title">无效原因 P5 vs P6 对比（条长=数量）</div>
+  <div id="reason-cmp-bars"></div>
+</div>
+</div>
+<div id="s3"><h2>每日执行情况</h2><div class="insight"><strong>当日完成最高数：</strong>6月15日 完成 1,236 家。<br><strong>上旬合计 6,821 &middot; 中旬合计 8,211 &middot; 下旬合计 8,421。</strong>相较5月"最后一周集中冲量"，6月进度分布更均衡。</div><div><span class="btn-chart" onclick="toggleChart('chart-daily')">&#x1F4CA; 查看日进度分布图</span></div><div id="chart-daily" class="ch-panel show"><div class="chart-title">6月每日完成趋势</div><div class="bar-chart" id="daily-bars"></div></div><h3>高产出日异常摘录</h3><p class="text-sm">单日完成 &#x2265;60 且 当日无效 &#x2265;8 且 当日无效率 &#x2265;12%</p><table><thead><tr><th>岗位编号</th><th>检查员</th><th>总无效率</th><th>异常日期</th><th>当日完成</th><th>当日无效</th><th>当日无效率</th><th>主要原因</th></tr></thead><tbody><tr><td>30394017</td><td>胡志彬</td><td>14.12%</td><td>6月10日</td><td>70</td><td>13</td><td>18.57%</td><td>锁门/临时关门(5)</td></tr><tr><td>30394021</td><td>伍洋</td><td>16.19%</td><td>6月24日</td><td>62</td><td>11</td><td>17.74%</td><td>客户拒访(5)</td></tr><tr><td>30394022</td><td>刘梓鑫</td><td>12.15%</td><td>6月23日</td><td>60</td><td>10</td><td>16.67%</td><td>地址找不到/拆迁(4)</td></tr><tr><td>30394021</td><td>伍洋</td><td>16.19%</td><td>6月28日</td><td>75</td><td>12</td><td>16.00%</td><td>锁门/临时关门(7)</td></tr><tr><td>30394006</td><td>黄火晴</td><td>10.09%</td><td>6月29日</td><td>63</td><td>10</td><td>15.87%</td><td>锁门/临时关门(9)</td></tr><tr><td>30394024</td><td>龚丹</td><td>8.68%</td><td>6月27日</td><td>60</td><td>9</td><td>15.00%</td><td>地址找不到/拆迁(5)</td></tr><tr><td>30394031</td><td>陈文丽</td><td>9.45%</td><td>6月27日</td><td>60</td><td>9</td><td>15.00%</td><td>锁门/临时关门(5)</td></tr><tr><td>30394027</td><td>洪凯</td><td>6.30%</td><td>6月22日</td><td>60</td><td>9</td><td>15.00%</td><td>锁门/临时关门(4)</td></tr><tr><td>30394001</td><td>夏勍炜</td><td>10.59%</td><td>6月28日</td><td>67</td><td>10</td><td>14.93%</td><td>锁门/临时关门(10)</td></tr><tr><td>30394038</td><td>冯方方</td><td>13.58%</td><td>6月27日</td><td>61</td><td>9</td><td>14.75%</td><td>锁门/临时关门(7)</td></tr><tr><td>30394022</td><td>刘梓鑫</td><td>12.15%</td><td>6月30日</td><td>60</td><td>8</td><td>13.33%</td><td>锁门/临时关门(6)</td></tr><tr><td>30394024</td><td>龚丹</td><td>8.68%</td><td>6月28日</td><td>60</td><td>8</td><td>13.33%</td><td>锁门/临时关门(7)</td></tr></tbody></table><div class="insight"><strong>重点关注：</strong>胡志彬（30394017）于6月10日，完成70家、无效13家（18.57%），已对该类高产出日做当日抽检加码。</div></div><div id="s4"><h2>6月异常门店 &middot; 原因总览</h2><div class="insight">锁门/临时关门 1,023 家，占比 57.57%，仍是第一无效来源。倒闭/停业 + 客户拒访合计 483 家（27.18%）。特殊场所无法进入 72 家，较5月432家大幅下降（&darr;83%），前端剔除见效。餐饮临时关门中时段错配可疑 101 家。</div><div><span class="btn-chart" onclick="toggleChart('chart-invalid-reason')">&#x1F4CA; 异常原因结构</span></div><div id="chart-invalid-reason" class="ch-panel show"><div class="chart-title">无效原因分布</div><div id="ring-invalid-reason" class="ring-chart"></div></div><table><thead><tr><th>无效原因</th><th>数量</th><th>占比</th></tr></thead><tbody><tr><td>锁门/临时关门</td><td>1023</td><td>57.57%</td></tr><tr><td>倒闭/停业</td><td>324</td><td>18.23%</td></tr><tr><td>客户拒访，未采集</td><td>159</td><td>8.95%</td></tr><tr><td>根据地址找不到客户/拆迁</td><td>74</td><td>4.16%</td></tr><tr><td>特殊场所（学校/部队等）无法进入</td><td>72</td><td>4.05%</td></tr><tr><td>门店装修</td><td>68</td><td>3.83%</td></tr><tr><td>其他原因</td><td>47</td><td>2.64%</td></tr><tr><td>季节性不售卖饮料</td><td>6</td><td>0.34%</td></tr><tr><td>转行或不销售饮料产品</td><td>4</td><td>0.23%</td></tr><tr><td>合计</td><td>1777</td><td>100.00%</td></tr></tbody></table></div><div id="s5"><h2>临时关门 &middot; 餐饮时段错配专项</h2><div class="kpi-grid"><div class="kpi-card"><div class="label">临时关门合计</div><div class="value blue">1,023</div></div><div class="kpi-card"><div class="label">餐饮临时关门</div><div class="value yellow">567</div></div><div class="kpi-card"><div class="label">A类早餐异常</div><div class="value red">32</div></div><div class="kpi-card"><div class="label">B类烧烤宵夜异常</div><div class="value red">69</div></div></div><div class="kpi-grid"><div class="kpi-card"><div class="label">A+B可疑合计</div><div class="value red">101</div></div><div class="kpi-card"><div class="label">占餐饮临时关门</div><div class="value yellow">17.81%</div></div></div><div class="insight warn"><strong>判定规则：</strong><br>A类&middot;早餐异常：店名含 早餐/早点/早茶/包子/油条/豆浆/煎饼/肠粉 且进店时间 &#x2265;11:00<br>B类&middot;烧烤宵夜异常：店名含 烧烤/宵夜/夜宵/烤串/大排档/炸串/撸串/夜市 且进店时间 &lt;15:00<br><br><strong>管理建议：</strong>对A/B类门店强制复核，确认是否应改判或安排重访。</div><div class="tab-bar"><button class="tab-btn active" onclick="switchTab('tab-a')">A类 &middot; 早餐店 (32家)</button><button class="tab-btn" onclick="switchTab('tab-b')">B类 &middot; 烧烤宵夜 (69家)</button></div><div id="tab-a" class="tab-panel active"><h4>A类：早餐店 &middot; 11:00后进店（共32家）</h4><p class="text-sm">关键词：早餐、早点、早茶、包子、油条、豆浆、煎饼、肠粉</p><table><thead><tr><th>检查员</th><th>客户名称</th><th>关键词</th><th>进店时间</th><th>乡镇</th><th>大区</th></tr></thead><tbody><tr><td>夏勍炜</td><td>郭记早点店</td><td>早点</td><td>11:06</td><td>莲花县-城区</td><td>宜春</td></tr><tr><td>黄火晴</td><td>夜包子</td><td>包子</td><td>11:30</td><td>龙南县-城区</td><td>赣州</td></tr><tr><td>刘梓鑫</td><td>广信区皂头镇郑记鲜香包子店</td><td>包子</td><td>12:16</td><td>皂头镇-广信区-上饶市</td><td>上饶</td></tr><tr><td>洪凯</td><td>南丰县牛羊鲜早点店</td><td>早点</td><td>12:59</td><td>南丰县-城区</td><td>上饶</td></tr><tr><td>李岚</td><td>高安市独城镇阿云早餐店</td><td>早餐</td><td>13:18</td><td>独城镇-高安市</td><td>宜春</td></tr><tr><td>肖贤军</td><td>石磨肠粉</td><td>肠粉</td><td>13:21</td><td>上高县-城区</td><td>宜春</td></tr><tr><td>肖南平</td><td>弄子里老面烧饼</td><td>早点</td><td>11:24</td><td>吉水县-城区</td><td>赣州</td></tr><tr><td>夏勍炜</td><td>辣子鸡早餐店</td><td>早餐</td><td>12:30</td><td>永新县-城区</td><td>赣州</td></tr><tr><td>夏勍炜</td><td>阿玲早餐店</td><td>早餐</td><td>11:45</td><td>南昌市-新建区-城区</td><td>南昌</td></tr><tr><td>陈文丽</td><td>建德小笼包</td><td>包子</td><td>11:30</td><td>南昌市-新建区-城区</td><td>南昌</td></tr><tr><td>陈文丽</td><td>天津狗不理包子</td><td>包子</td><td>12:00</td><td>南昌市-新建区-城区</td><td>南昌</td></tr><tr><td>夏勍炜</td><td>花溪牛肉粉早餐店</td><td>早餐</td><td>14:01</td><td>永新县-城区</td><td>赣州</td></tr></tbody></table><p class="text-sm" style="margin-top:8px"><strong>检查员TOP：</strong>夏勍炜 7家、洪凯 2家、李岚 2家、肖贤军 2家、肖南平 2家</p><table><thead><tr><th>乡镇</th><th>数量</th></tr></thead><tbody><tr><td>永新县-城区</td><td>4</td></tr><tr><td>南昌市-新建区-城区</td><td>3</td></tr><tr><td>莲花县-城区</td><td>2</td></tr><tr><td>上高县-城区</td><td>2</td></tr><tr><td>丰城市-城区</td><td>2</td></tr><tr><td>龙南县-城区</td><td>1</td></tr><tr><td>皂头镇-广信区-上饶市</td><td>1</td></tr><tr><td>南丰县-城区</td><td>1</td></tr><tr><td>独城镇-高安市</td><td>1</td></tr><tr><td>龙回镇-南康区-赣州市</td><td>1</td></tr><tr><td>万安县-城区</td><td>1</td></tr><tr><td>洋口镇-广丰区-上饶市</td><td>1</td></tr></tbody></table></div><div id="tab-b" class="tab-panel"><h4>B类：烧烤/宵夜店 &middot; 15:00前进店（共69家）</h4><p class="text-sm">关键词：烧烤、宵夜、夜宵、烤串、大排档、炸串、撸串、夜市</p><table><thead><tr><th>检查员</th><th>客户名称</th><th>关键词</th><th>进店时间</th><th>乡镇</th><th>大区</th></tr></thead><tbody><tr><td>刘峰</td><td>万载县阿亮烧烤店</td><td>烧烤</td><td>08:29</td><td>万载县-城区</td><td>宜春</td></tr><tr><td>赵静</td><td>茶絮夜宵</td><td>夜宵</td><td>08:39</td><td>小港镇-丰城市</td><td>宜春</td></tr><tr><td>伍洋</td><td>夜生活烧烤龙虾</td><td>烧烤</td><td>09:17</td><td>南昌县-城区</td><td>南昌</td></tr><tr><td>肖南平</td><td>7点烧烤石锅鱼</td><td>烧烤</td><td>09:28</td><td>值夏镇-青原区-吉安市</td><td>赣州</td></tr><tr><td>刘梓鑫</td><td>新疆麦麦提江羊肉烧烤店</td><td>烧烤</td><td>09:32</td><td>上饶市-广丰区-城区</td><td>上饶</td></tr><tr><td>伍洋</td><td>夫妻烧烤</td><td>烧烤</td><td>09:45</td><td>南昌市-青山湖区-城区</td><td>南昌</td></tr><tr><td>袁国裔</td><td>欧阳大排档</td><td>大排档</td><td>09:50</td><td>萍乡市-安源区-城区</td><td>宜春</td></tr><tr><td>章顺锋</td><td>新疆好兄弟特色烤羊肉</td><td>烤串</td><td>10:12</td><td>鹰潭市-月湖区-城区</td><td>上饶</td></tr><tr><td>胡昕睿</td><td>红谷滩烧烤</td><td>烧烤</td><td>10:30</td><td>南昌市-红谷滩新区-城区</td><td>南昌</td></tr><tr><td>唐明锋</td><td>九江宵夜</td><td>宵夜</td><td>10:45</td><td>南昌县-城区</td><td>南昌</td></tr><tr><td>章顺锋</td><td>烧烤龙</td><td>烧烤</td><td>11:01</td><td>上饶市-信州区-城区</td><td>上饶</td></tr><tr><td>袁国裔</td><td>萍乡烤串</td><td>烤串</td><td>11:20</td><td>萍乡市-安源区-城区</td><td>宜春</td></tr></tbody></table><p class="text-sm" style="margin-top:8px"><strong>检查员TOP5：</strong>伍洋 11家、刘梓鑫 6家、袁国裔 6家、胡昕睿 6家、章顺锋 6家</p><table><thead><tr><th>乡镇</th><th>数量</th></tr></thead><tbody><tr><td>南昌市-新建区-城区</td><td>7</td></tr><tr><td>萍乡市-安源区-城区</td><td>6</td></tr><tr><td>上饶市-信州区-城区</td><td>5</td></tr><tr><td>南昌县-城区</td><td>4</td></tr><tr><td>南昌市-青云谱区-城区</td><td>4</td></tr><tr><td>南昌市-青山湖区-城区</td><td>3</td></tr><tr><td>南昌市-东湖区-城区</td><td>3</td></tr><tr><td>田墩镇-广信区-上饶市</td><td>3</td></tr><tr><td>南昌市-红谷滩新区-城区</td><td>3</td></tr><tr><td>金溪县-城区</td><td>3</td></tr><tr><td>洋口镇-广丰区-上饶市</td><td>2</td></tr><tr><td>宜黄县-城区</td><td>2</td></tr></tbody></table></div></div><div id="s6"><h2>6月异常门店 &middot; 南昌大区</h2><div class="insight"><strong>南昌大区 共 11 个营业所，异常 574 家，平均占比 7.6%，高于江西平均</strong>。高于全省平均(7.15%)的营业所 9 个。</div><h3>营业所维度</h3><table><thead><tr><th>营业所</th><th>完成数</th><th>异常数</th><th>异常占比</th></tr></thead><tbody><tr><td>总计</td><td>7558</td><td>574</td><td>7.6</td></tr><tr><td>新建营业所</td><td>604</td><td>79</td><td>13.1</td></tr><tr><td>昌北办事处</td><td>113</td><td>14</td><td>12.4</td></tr><tr><td>瑶湖营业所</td><td>356</td><td>44</td><td>12.4</td></tr><tr><td>IC餐饮运作</td><td>458</td><td>50</td><td>10.9</td></tr><tr><td>南昌县营业所</td><td>938</td><td>101</td><td>10.8</td></tr><tr><td>IC特渠运作</td><td>176</td><td>18</td><td>10.2</td></tr><tr><td>红谷滩办事处</td><td>443</td><td>42</td><td>9.5</td></tr><tr><td>安义办事处</td><td>120</td><td>10</td><td>8.3</td></tr><tr><td>朝阳营业所</td><td>696</td><td>52</td><td>7.5</td></tr><tr><td>KA销售</td><td>713</td><td>45</td><td>6.3</td></tr><tr><td>进贤办事处</td><td>283</td><td>16</td><td>5.7</td></tr></tbody></table><h3>检查员维度</h3><table><thead><tr><th>岗位编号</th><th>检查员</th><th>总门店</th><th>无效</th><th>占比</th></tr></thead><tbody><tr><td>30394021</td><td>伍洋</td><td>1075</td><td>174</td><td>16.2%</td></tr><tr><td>30394015</td><td>胡昕睿</td><td>584</td><td>60</td><td>10.3%</td></tr><tr><td>30394018</td><td>唐明锋</td><td>849</td><td>85</td><td>10.0%</td></tr><tr><td>30394031</td><td>陈文丽</td><td>529</td><td>50</td><td>9.5%</td></tr><tr><td>30394020</td><td>周棕明</td><td>262</td><td>23</td><td>8.8%</td></tr><tr><td>30394026</td><td>张晓亮</td><td>61</td><td>5</td><td>8.2%</td></tr><tr><td>30394011</td><td>丁豫</td><td>143</td><td>10</td><td>7.0%</td></tr><tr><td>30394043</td><td>芦映霞</td><td>869</td><td>48</td><td>5.5%</td></tr><tr><td>30394016</td><td>姜梦佳</td><td>610</td><td>31</td><td>5.1%</td></tr><tr><td>30394045</td><td>胡家俊</td><td>723</td><td>28</td><td>3.9%</td></tr><tr><td>30394040</td><td>邓敦福</td><td>978</td><td>35</td><td>3.6%</td></tr><tr><td>30394014</td><td>芦燕</td><td>621</td><td>21</td><td>3.4%</td></tr><tr><td>30394013</td><td>李中喜</td><td>254</td><td>4</td><td>1.6%</td></tr></tbody></table><div class="insight"><strong>检查员观察：</strong>无效占比高于全省平均且完成&#x2265;50店：伍洋 16.2%（174/1075）、胡昕睿 10.3%（60/584）、唐明锋 10.0%（85/849）、陈文丽 9.5%（50/529）、周棕明 8.8%（23/262）、张晓亮 8.2%（5/61）<br><strong>主要无效原因：</strong>锁门/临时关门占多数，建议重点盯控高频人员。</div><div><span class="btn-chart" onclick="toggleChart('chart-NC')">&#x1F4CA; 检查员异常排行</span></div><div id="chart-NC" class="ch-panel"><div class="chart-title">南昌大区 检查员异常占比排行</div><div class="bar-chart" id="bar-NC"></div></div></div><div id="s7"><h2>6月异常门店 &middot; 赣州大区</h2><div class="insight"><strong>赣州大区 共 11 个营业所，异常 367 家，平均占比 6.3%，低于江西平均</strong>。高于全省平均(7.15%)的营业所 7 个。</div><h3>营业所维度</h3><table><thead><tr><th>营业所</th><th>完成数</th><th>异常数</th><th>异常占比</th></tr></thead><tbody><tr><td>总计</td><td>5829</td><td>367</td><td>6.3</td></tr><tr><td>永新办事处</td><td>422</td><td>48</td><td>11.4</td></tr><tr><td>宁都办事处</td><td>213</td><td>22</td><td>10.3</td></tr><tr><td>龙南办事处</td><td>404</td><td>33</td><td>8.2</td></tr><tr><td>泰和办事处</td><td>253</td><td>20</td><td>7.9</td></tr><tr><td>遂川办事处</td><td>373</td><td>29</td><td>7.8</td></tr><tr><td>吉安县办事处</td><td>252</td><td>19</td><td>7.5</td></tr><tr><td>兴国办事处</td><td>174</td><td>13</td><td>7.5</td></tr><tr><td>吉水办事处</td><td>371</td><td>24</td><td>6.5</td></tr><tr><td>赣州营业所</td><td>851</td><td>52</td><td>6.1</td></tr><tr><td>吉安营业所</td><td>625</td><td>36</td><td>5.8</td></tr><tr><td>赣州IC运作</td><td>360</td><td>15</td><td>4.2</td></tr></tbody></table><h3>检查员维度</h3><table><thead><tr><th>岗位编号</th><th>检查员</th><th>总门店</th><th>无效</th><th>占比</th></tr></thead><tbody><tr><td>30394025</td><td>吕见美</td><td>137</td><td>19</td><td>13.9%</td></tr><tr><td>30394042</td><td>李启东</td><td>107</td><td>12</td><td>11.2%</td></tr><tr><td>30394001</td><td>夏勍炜</td><td>741</td><td>75</td><td>10.1%</td></tr><tr><td>30394006</td><td>黄火晴</td><td>218</td><td>22</td><td>10.1%</td></tr><tr><td>30394032</td><td>陈华常</td><td>123</td><td>11</td><td>8.9%</td></tr><tr><td>30394039</td><td>马里金</td><td>174</td><td>13</td><td>7.5%</td></tr><tr><td>30394030</td><td>胡丽萍</td><td>123</td><td>9</td><td>7.3%</td></tr><tr><td>30394010</td><td>李翔</td><td>528</td><td>36</td><td>6.8%</td></tr><tr><td>30394002</td><td>肖南平</td><td>1555</td><td>101</td><td>6.5%</td></tr><tr><td>30394009</td><td>张芳权</td><td>186</td><td>11</td><td>5.9%</td></tr><tr><td>30394037</td><td>刘海林</td><td>791</td><td>29</td><td>3.7%</td></tr><tr><td>30394004</td><td>王炳坤</td><td>629</td><td>20</td><td>3.2%</td></tr><tr><td>30394044</td><td>邓义涛</td><td>169</td><td>5</td><td>3.0%</td></tr><tr><td>30394026</td><td>张晓亮</td><td>348</td><td>4</td><td>1.1%</td></tr></tbody></table><div class="insight"><strong>检查员观察：</strong>无效占比高于全省平均且完成&#x2265;50店：吕见美 13.9%（19/137）、李启东 11.2%（12/107）、夏勍炜 10.1%（75/741）、黄火晴 10.1%（22/218）、陈华常 8.9%（11/123）、马里金 7.5%（13/174）<br><strong>主要无效原因：</strong>锁门/临时关门占多数，建议重点盯控高频人员。</div><div><span class="btn-chart" onclick="toggleChart('chart-GZ')">&#x1F4CA; 检查员异常排行</span></div><div id="chart-GZ" class="ch-panel"><div class="chart-title">赣州大区 检查员异常占比排行</div><div class="bar-chart" id="bar-GZ"></div></div></div><div id="s8"><h2>6月异常门店 &middot; 上饶大区</h2><div class="insight"><strong>上饶大区 共 11 个营业所，异常 536 家，平均占比 8.3%，高于江西平均</strong>。高于全省平均(7.15%)的营业所 8 个。</div><h3>营业所维度</h3><table><thead><tr><th>营业所</th><th>完成数</th><th>异常数</th><th>异常占比</th></tr></thead><tbody><tr><td>总计</td><td>6471</td><td>536</td><td>8.3</td></tr><tr><td>玉山办事处</td><td>325</td><td>48</td><td>14.8</td></tr><tr><td>婺源办事处</td><td>177</td><td>25</td><td>14.1</td></tr><tr><td>上饶营业所</td><td>944</td><td>131</td><td>13.9</td></tr><tr><td>余干办事处</td><td>324</td><td>44</td><td>13.6</td></tr><tr><td>弋阳办事处</td><td>297</td><td>32</td><td>10.8</td></tr><tr><td>广丰办事处</td><td>409</td><td>41</td><td>10.0</td></tr><tr><td>乐安办事处</td><td>251</td><td>24</td><td>9.6</td></tr><tr><td>抚州营业所</td><td>417</td><td>31</td><td>7.4</td></tr><tr><td>东乡办事处</td><td>439</td><td>30</td><td>6.8</td></tr><tr><td>鹰潭营业所</td><td>659</td><td>41</td><td>6.2</td></tr><tr><td>铅山办事处</td><td>231</td><td>14</td><td>6.1</td></tr></tbody></table><h3>检查员维度</h3><table><thead><tr><th>岗位编号</th><th>检查员</th><th>总门店</th><th>无效</th><th>占比</th></tr></thead><tbody><tr><td>30394023</td><td>章顺锋</td><td>746</td><td>111</td><td>14.9%</td></tr><tr><td>30394017</td><td>胡志彬</td><td>177</td><td>25</td><td>14.1%</td></tr><tr><td>30394038</td><td>冯方方</td><td>324</td><td>44</td><td>13.6%</td></tr><tr><td>30394022</td><td>刘梓鑫</td><td>815</td><td>99</td><td>12.1%</td></tr><tr><td>30394024</td><td>龚丹</td><td>645</td><td>56</td><td>8.7%</td></tr><tr><td>30394048</td><td>陈小军</td><td>699</td><td>52</td><td>7.4%</td></tr><tr><td>30394041</td><td>孙聪</td><td>449</td><td>30</td><td>6.7%</td></tr><tr><td>30394019</td><td>陈小燕</td><td>303</td><td>20</td><td>6.6%</td></tr><tr><td>30394027</td><td>洪凯</td><td>730</td><td>46</td><td>6.3%</td></tr><tr><td>30394012</td><td>舒炎</td><td>465</td><td>24</td><td>5.2%</td></tr><tr><td>30394046</td><td>朱春武</td><td>540</td><td>16</td><td>3.0%</td></tr><tr><td>30394028</td><td>徐佩琦</td><td>578</td><td>13</td><td>2.2%</td></tr></tbody></table><div class="insight"><strong>检查员观察：</strong>无效占比高于全省平均且完成&#x2265;50店：章顺锋 14.9%（111/746）、胡志彬 14.1%（25/177）、冯方方 13.6%（44/324）、刘梓鑫 12.1%（99/815）、龚丹 8.7%（56/645）、陈小军 7.4%（52/699）<br><strong>主要无效原因：</strong>锁门/临时关门占多数，建议重点盯控高频人员。</div><div><span class="btn-chart" onclick="toggleChart('chart-SR')">&#x1F4CA; 检查员异常排行</span></div><div id="chart-SR" class="ch-panel"><div class="chart-title">上饶大区 检查员异常占比排行</div><div class="bar-chart" id="bar-SR"></div></div></div><div id="s9"><h2>6月异常门店 &middot; 宜春大区</h2><div class="insight"><strong>宜春大区 共 10 个营业所，异常 300 家，平均占比 6.0%，低于江西平均</strong>。高于全省平均(7.15%)的营业所 5 个。</div><h3>营业所维度</h3><table><thead><tr><th>营业所</th><th>完成数</th><th>异常数</th><th>异常占比</th></tr></thead><tbody><tr><td>总计</td><td>4994</td><td>300</td><td>6.0</td></tr><tr><td>丰城办事处</td><td>405</td><td>37</td><td>9.1</td></tr><tr><td>安义办事处</td><td>179</td><td>16</td><td>8.9</td></tr><tr><td>萍乡营业所</td><td>898</td><td>75</td><td>8.4</td></tr><tr><td>芦溪办事处</td><td>360</td><td>28</td><td>7.8</td></tr><tr><td>上高办事处</td><td>458</td><td>33</td><td>7.2</td></tr><tr><td>高安办事处</td><td>324</td><td>23</td><td>7.1</td></tr><tr><td>万载办事处</td><td>419</td><td>25</td><td>6.0</td></tr><tr><td>樟树办事处</td><td>354</td><td>21</td><td>5.9</td></tr><tr><td>新余营业所</td><td>946</td><td>27</td><td>2.9</td></tr><tr><td>宜春营业所</td><td>651</td><td>15</td><td>2.3</td></tr></tbody></table><h3>检查员维度</h3><table><thead><tr><th>岗位编号</th><th>检查员</th><th>总门店</th><th>无效</th><th>占比</th></tr></thead><tbody><tr><td>30394001</td><td>夏勍炜</td><td>90</td><td>13</td><td>14.4%</td></tr><tr><td>30394029</td><td>吉雪</td><td>21</td><td>3</td><td>14.3%</td></tr><tr><td>30394047</td><td>包德炳</td><td>126</td><td>11</td><td>8.7%</td></tr><tr><td>30394033</td><td>肖贤军</td><td>471</td><td>40</td><td>8.5%</td></tr><tr><td>30394003</td><td>袁国裔</td><td>1288</td><td>103</td><td>8.0%</td></tr><tr><td>30394008</td><td>赵静</td><td>611</td><td>44</td><td>7.2%</td></tr><tr><td>30394036</td><td>李岚</td><td>439</td><td>29</td><td>6.6%</td></tr><tr><td>30394026</td><td>张晓亮</td><td>52</td><td>3</td><td>5.8%</td></tr><tr><td>30394035</td><td>钟鑫武</td><td>204</td><td>6</td><td>2.9%</td></tr><tr><td>30394007</td><td>刘峰</td><td>950</td><td>27</td><td>2.8%</td></tr><tr><td>30394034</td><td>廖文玲</td><td>742</td><td>21</td><td>2.8%</td></tr></tbody></table><div class="insight"><strong>检查员观察：</strong>无效占比高于全省平均且完成&#x2265;50店：夏勍炜 14.4%（13/90）、包德炳 8.7%（11/126）、肖贤军 8.5%（40/471）、袁国裔 8.0%（103/1288）、赵静 7.2%（44/611）<br><strong>主要无效原因：</strong>锁门/临时关门占多数，建议重点盯控高频人员。</div><div><span class="btn-chart" onclick="toggleChart('chart-YC')">&#x1F4CA; 检查员异常排行</span></div><div id="chart-YC" class="ch-panel"><div class="chart-title">宜春大区 检查员异常占比排行</div><div class="bar-chart" id="bar-YC"></div></div></div><div id="s10"><h2>自检QC &middot; 大区正确率</h2><table><thead><tr><th>大区</th><th>检查门店数</th><th>抽查店数</th><th>抽查率</th><th>错误数量</th><th>正确率</th></tr></thead><tbody><tr><td>赣州大区</td><td>5829</td><td>3892</td><td>66.77%</td><td>98</td><td>97.48%</td></tr><tr><td>南昌大区</td><td>7558</td><td>3812</td><td>50.44%</td><td>163</td><td>95.72%</td></tr><tr><td>上饶大区</td><td>6471</td><td>4076</td><td>62.99%</td><td>73</td><td>98.21%</td></tr><tr><td>宜春大区</td><td>4994</td><td>3567</td><td>71.43%</td><td>72</td><td>97.98%</td></tr><tr><td>合计</td><td>24852</td><td>15347</td><td>61.75%</td><td>406</td><td>97.35%</td></tr></tbody></table><div><span class="btn-chart" onclick="toggleChart('chart-qc-region')">&#x1F4CA; 大区正确率对比</span></div><div id="chart-qc-region" class="ch-panel"><div class="chart-title">四大区正确率</div><div class="bar-chart" id="bar-qc-region"></div></div><h3>QC重点关注人员</h3><table><thead><tr><th>岗位编号</th><th>检查员</th><th>抽查数</th><th>错误数</th><th>正确率</th><th>关注点</th></tr></thead><tbody><tr><td>30394021</td><td>伍洋</td><td>615</td><td>129</td><td>79.02%</td><td>正确率偏低+错误量大</td></tr><tr><td>30394047</td><td>包德炳</td><td>70</td><td>14</td><td>80.00%</td><td>正确率偏低</td></tr><tr><td>30394004</td><td>王炳坤</td><td>368</td><td>21</td><td>94.29%</td><td>正确率偏低+错误量大</td></tr><tr><td>30394009</td><td>张芳权</td><td>186</td><td>10</td><td>94.62%</td><td>正确率偏低</td></tr><tr><td>30394044</td><td>邓义涛</td><td>169</td><td>8</td><td>95.27%</td><td>正确率偏低</td></tr><tr><td>30394010</td><td>李翔</td><td>285</td><td>13</td><td>95.44%</td><td>正确率偏低</td></tr><tr><td>30394019</td><td>陈小燕</td><td>284</td><td>11</td><td>96.13%</td><td>正确率偏低</td></tr></tbody></table><div class="insight warn"><strong>管理动作：</strong>伍洋正确率 79.02%，包德炳 80.00%。对正确率&lt;95%人员：提高当日抽检比例，增加1V1纠错。</div><h3>南昌大区（检查员明细）</h3><p class="text-sm">大区正确率 95.72%（低于全省平均）&middot; 全省平均 97.35%</p><table><thead><tr><th>岗位编号</th><th>检查员</th><th>检查数</th><th>抽查数</th><th>抽查率</th><th>错误数</th><th>正确率</th></tr></thead><tbody><tr><td>30394045</td><td>胡家俊</td><td>723</td><td>365</td><td>50.48%</td><td>0</td><td>100.00%</td></tr><tr><td>30394013</td><td>李中喜</td><td>254</td><td>104</td><td>40.94%</td><td>0</td><td>100.00%</td></tr><tr><td>30394011</td><td>丁豫</td><td>143</td><td>10</td><td>6.99%</td><td>0</td><td>100.00%</td></tr><tr><td>30394040</td><td>邓敦福</td><td>978</td><td>476</td><td>48.67%</td><td>1</td><td>99.79%</td></tr><tr><td>30394016</td><td>姜梦佳</td><td>610</td><td>316</td><td>51.80%</td><td>1</td><td>99.68%</td></tr><tr><td>30394031</td><td>陈文丽</td><td>529</td><td>280</td><td>52.93%</td><td>2</td><td>99.29%</td></tr><tr><td>30394018</td><td>唐明锋</td><td>849</td><td>511</td><td>60.19%</td><td>5</td><td>99.02%</td></tr><tr><td>30394043</td><td>芦映霞</td><td>869</td><td>411</td><td>47.30%</td><td>6</td><td>98.54%</td></tr><tr><td>30394014</td><td>芦燕</td><td>621</td><td>287</td><td>46.22%</td><td>6</td><td>97.91%</td></tr><tr><td>30394015</td><td>胡昕睿</td><td>584</td><td>322</td><td>55.14%</td><td>7</td><td>97.83%</td></tr><tr><td>30394020</td><td>周棕明</td><td>262</td><td>88</td><td>33.59%</td><td>3</td><td>96.59%</td></tr><tr><td>30394021</td><td>伍洋</td><td>1075</td><td>615</td><td>57.21%</td><td>129</td><td>79.02%</td></tr></tbody></table><div class="insight">低于全省平均的检查员：周棕明、伍洋。</div><h4>南昌大区错误类型拆解</h4><p class="text-sm">基于错误明细 163 条</p><table><thead><tr><th>错误大类</th><th>数量</th><th>占比</th></tr></thead><tbody><tr><td>部分采集无合理缘由</td><td>87</td><td>53.37%</td></tr><tr><td>协议类错误</td><td>28</td><td>17.18%</td></tr><tr><td>漏拍类</td><td>27</td><td>16.56%</td></tr><tr><td>冰柜/冰箱相关</td><td>13</td><td>7.98%</td></tr><tr><td>其他</td><td>5</td><td>3.07%</td></tr><tr><td>货架/货道相关</td><td>2</td><td>1.23%</td></tr><tr><td>拍错模块</td><td>1</td><td>0.61%</td></tr><tr><td>合计</td><td>163</td><td>100.00%</td></tr></tbody></table><div><span class="btn-chart" onclick="toggleChart('chart-nc-errors')">&#x1F4CA; 错误类型分布</span></div><div id="chart-nc-errors" class="ch-panel"><div class="chart-title">南昌大区错误类型</div><div id="ring-nc-errors" class="ring-chart"></div></div><div class="insight"><strong>核心问题：</strong>部分采集无合理缘由占 53.37%。伍洋 129条错误占南昌大区错误总数 79%。</div><h3>赣州大区（检查员明细）</h3><table><thead><tr><th>岗位编号</th><th>检查员</th><th>检查数</th><th>抽查数</th><th>抽查率</th><th>错误数</th><th>正确率</th></tr></thead><tbody><tr><td>30394032</td><td>陈华常</td><td>123</td><td>123</td><td>100.00%</td><td>1</td><td>99.19%</td></tr><tr><td>30394042</td><td>李启东</td><td>107</td><td>107</td><td>100.00%</td><td>1</td><td>99.07%</td></tr><tr><td>30394002</td><td>肖南平</td><td>1555</td><td>1271</td><td>81.74%</td><td>14</td><td>98.90%</td></tr><tr><td>30394037</td><td>刘海林</td><td>791</td><td>539</td><td>68.14%</td><td>10</td><td>98.14%</td></tr><tr><td>30394001</td><td>夏勍炜</td><td>831</td><td>388</td><td>46.69%</td><td>8</td><td>97.94%</td></tr><tr><td>30394006</td><td>黄火晴</td><td>218</td><td>86</td><td>39.45%</td><td>2</td><td>97.67%</td></tr><tr><td>30394026</td><td>张晓亮</td><td>400</td><td>103</td><td>25.75%</td><td>3</td><td>97.09%</td></tr><tr><td>30394010</td><td>李翔</td><td>528</td><td>285</td><td>53.98%</td><td>13</td><td>95.44%</td></tr><tr><td>30394044</td><td>邓义涛</td><td>169</td><td>169</td><td>100.00%</td><td>8</td><td>95.27%</td></tr><tr><td>30394009</td><td>张芳权</td><td>186</td><td>186</td><td>100.00%</td><td>10</td><td>94.62%</td></tr><tr><td>30394004</td><td>王炳坤</td><td>629</td><td>368</td><td>58.51%</td><td>21</td><td>94.29%</td></tr></tbody></table><div class="insight">低于全省平均的检查员：张晓亮 97.09%（错3/103）、李翔 95.44%（错13/285）、邓义涛 95.27%（错8/169）、张芳权 94.62%（错10/186）、王炳坤 94.29%（错21/368）。</div><h3>上饶大区（检查员明细）</h3><table><thead><tr><th>岗位编号</th><th>检查员</th><th>检查数</th><th>抽查数</th><th>抽查率</th><th>错误数</th><th>正确率</th></tr></thead><tbody><tr><td>30394041</td><td>孙聪</td><td>449</td><td>270</td><td>60.13%</td><td>0</td><td>100.00%</td></tr><tr><td>30394028</td><td>徐佩琦</td><td>578</td><td>183</td><td>31.66%</td><td>0</td><td>100.00%</td></tr><tr><td>30394017</td><td>胡志彬</td><td>177</td><td>77</td><td>43.50%</td><td>0</td><td>100.00%</td></tr><tr><td>30394023</td><td>章顺锋</td><td>746</td><td>428</td><td>57.37%</td><td>1</td><td>99.77%</td></tr><tr><td>30394027</td><td>洪凯</td><td>730</td><td>396</td><td>54.25%</td><td>1</td><td>99.75%</td></tr><tr><td>30394046</td><td>朱春武</td><td>540</td><td>297</td><td>55.00%</td><td>1</td><td>99.66%</td></tr><tr><td>30394024</td><td>龚丹</td><td>645</td><td>368</td><td>57.05%</td><td>2</td><td>99.46%</td></tr><tr><td>30394012</td><td>舒炎</td><td>465</td><td>280</td><td>60.22%</td><td>2</td><td>99.29%</td></tr><tr><td>30394048</td><td>陈小军</td><td>699</td><td>385</td><td>55.08%</td><td>3</td><td>99.22%</td></tr><tr><td>30394038</td><td>冯方方</td><td>324</td><td>219</td><td>67.59%</td><td>2</td><td>99.09%</td></tr><tr><td>30394022</td><td>刘梓鑫</td><td>815</td><td>584</td><td>71.66%</td><td>8</td><td>98.63%</td></tr><tr><td>30394019</td><td>陈小燕</td><td>303</td><td>284</td><td>93.73%</td><td>11</td><td>96.13%</td></tr></tbody></table><div class="insight">低于全省平均的检查员：陈小燕 96.13%（错11/284）。</div><h3>宜春大区（检查员明细）</h3><table><thead><tr><th>岗位编号</th><th>检查员</th><th>检查数</th><th>抽查数</th><th>抽查率</th><th>错误数</th><th>正确率</th></tr></thead><tbody><tr><td>30394035</td><td>钟鑫武</td><td>204</td><td>37</td><td>18.14%</td><td>0</td><td>100.00%</td></tr><tr><td>30394029</td><td>吉雪</td><td>21</td><td>21</td><td>100.00%</td><td>0</td><td>100.00%</td></tr><tr><td>30394034</td><td>廖文玲</td><td>742</td><td>483</td><td>65.09%</td><td>1</td><td>99.79%</td></tr><tr><td>30394003</td><td>袁国裔</td><td>1288</td><td>707</td><td>54.89%</td><td>3</td><td>99.58%</td></tr><tr><td>30394033</td><td>肖贤军</td><td>471</td><td>471</td><td>100.00%</td><td>11</td><td>97.66%</td></tr><tr><td>30394036</td><td>李岚</td><td>439</td><td>439</td><td>100.00%</td><td>13</td><td>97.04%</td></tr><tr><td>30394008</td><td>赵静</td><td>611</td><td>611</td><td>100.00%</td><td>19</td><td>96.89%</td></tr><tr><td>30394047</td><td>包德炳</td><td>126</td><td>70</td><td>55.56%</td><td>14</td><td>80.00%</td></tr></tbody></table><div class="insight">低于全省平均的检查员：李岚 97.04%（错13/439）、赵静 96.89%（错19/611）、包德炳 80.00%（错14/70）。</div></div><div id="s11"><h2>6月培训痕迹</h2><div class="insight">线上全员培训共计3次：<br>&middot; <a href="https://meeting.tencent.com/dm/bgvxYJmKEYoO" target="_blank">6月2日 腾讯会议</a><br>&middot; <a href="https://meeting.tencent.com/dm/H8LozMiZ108V" target="_blank">6月3日 腾讯会议</a><br>&middot; <a href="https://meeting.tencent.com/dm/VS77TajUDkCw" target="_blank">6月5日 腾讯会议</a><br>新人区域分区培训2次，督导跟线培训2次。<br>本月采取当日跟进当日纠错当日1V1视频培训模式，新人平均每周2次，整月约计近20次。</div><h2>6月执行总结</h2><div class="summary-grid"><div class="summary-card" style="background:#f0fdf4;border-color:#bbf7d0"><div class="s-title" style="color:#059669">&#x2B50; 亮点</div><ul><li>&#x2705; 完成率 100.00%（P5:99.83%+0.17pt）</li><li>&#x2705; 无效率 7.15%，较5月下降3.48pt（&darr;32.7%）</li><li>&#x2705; 特殊场所无效432降至72（&darr;83.3%）</li><li>&#x2705; 日进度从月末冲刺转向均衡分布</li><li>&#x2705; P5违规135家&rarr;P6清零</li></ul></div><div class="summary-card" style="background:#fef2f2;border-color:#fecaca"><div class="s-title" style="color:#dc2626">&#x26A0;&#xFE0F; 风险</div><ul><li>&#x274C; 锁门/临时关门占无效比逆升至57.57%</li><li>&#x274C; 餐饮时段错配可疑 101 家</li><li>&#x274C; 部分营业所异常占比&#x2265;15%</li><li>&#x274C; 伍洋QC正确率79.02%</li></ul></div><div class="summary-card" style="background:#eff6ff;border-color:#bfdbfe"><div class="s-title" style="color:#2563eb">&#x1F3AF; 下一步</div><ul><li>&#x1F4CB; 早餐 &#x2265;11:00 / 烧烤宵夜 &lt;15:00强制复核</li><li>&#x1F4CB; 锁门类二次复核提至50%+</li><li>&#x1F4CB; 正确率&lt;95%人员加抽+1V1复训</li><li>&#x1F4CB; 周目标拆解，7月进一步优化</li></ul></div></div></div></div><script type="application/json" id="chart-data">{"completion": [["南昌IC事业部", "10.73%", 10.73], ["南昌东区域", "9.79%", 9.79], ["上饶区域", "9.64%", 9.64], ["南昌西区域", "8.52%", 8.52], ["吉安区域", "7.86%", 7.86], ["抚州区域", "6.35%", 6.35], ["重点客户部", "6.31%", 6.31], ["赣西区域", "5.44%", 5.44], ["赣州区域", "4.96%", 4.96], ["九江区域", "3.77%", 3.77]], "daily": [430, 774, 623, 705, 709, 634, 628, 501, 699, 1118, 950, 1130, 436, 731, 1236, 984, 1002, 926, 141, 675, 876, 921, 858, 754, 873, 933, 990, 754, 662, 800], "waterfall": [["吉安区域", 8.46, 7.86, 0.6], ["赣州区域", 6.0, 4.96, 1.04], ["抚州区域", 7.49, 6.35, 1.14], ["南昌西区域", 10.03, 8.52, 1.51], ["南昌东区域", 11.5, 9.79, 1.71], ["九江区域", 5.62, 3.77, 1.85], ["赣西区域", 7.33, 5.44, 1.89], ["南昌IC事业部", 12.67, 10.73, 1.94], ["重点客户部", 8.49, 6.31, 2.18], ["上饶区域", 14.73, 9.64, 5.09]], "reason": [["锁门/临时关门", 1211, 1023], ["特殊场所无法进入", 432, 324], ["倒闭/停业", 352, 159], ["客户拒访，未采集", 231, 74], ["根据地址找不到客户/拆迁", 86, 72]], "inspectors": {"NC": [["伍洋", "16.2%", 16.2], ["胡昕睿", "10.3%", 10.3], ["唐明锋", "10.0%", 10.0], ["陈文丽", "9.5%", 9.5], ["周棕明", "8.8%", 8.8], ["张晓亮", "8.2%", 8.2], ["丁豫", "7.0%", 7.0], ["芦映霞", "5.5%", 5.5], ["姜梦佳", "5.1%", 5.1], ["胡家俊", "3.9%", 3.9], ["邓敦福", "3.6%", 3.6], ["芦燕", "3.4%", 3.4], ["李中喜", "1.6%", 1.6]], "GZ": [["吕见美", "13.9%", 13.9], ["李启东", "11.2%", 11.2], ["夏勍炜", "10.1%", 10.1], ["黄火晴", "10.1%", 10.1], ["陈华常", "8.9%", 8.9], ["马里金", "7.5%", 7.5], ["胡丽萍", "7.3%", 7.3], ["李翔", "6.8%", 6.8], ["肖南平", "6.5%", 6.5], ["张芳权", "5.9%", 5.9], ["刘海林", "3.7%", 3.7], ["王炳坤", "3.2%", 3.2], ["邓义涛", "3.0%", 3.0], ["张晓亮", "1.1%", 1.1]], "SR": [["章顺锋", "14.9%", 14.9], ["胡志彬", "14.1%", 14.1], ["冯方方", "13.6%", 13.6], ["刘梓鑫", "12.1%", 12.1], ["龚丹", "8.7%", 8.7], ["陈小军", "7.4%", 7.4], ["孙聪", "6.7%", 6.7], ["陈小燕", "6.6%", 6.6], ["洪凯", "6.3%", 6.3], ["舒炎", "5.2%", 5.2], ["朱春武", "3.0%", 3.0], ["徐佩琦", "2.2%", 2.2]], "YC": [["夏勍炜", "14.4%", 14.4], ["吉雪", "14.3%", 14.3], ["包德炳", "8.7%", 8.7], ["肖贤军", "8.5%", 8.5], ["袁国裔", "8.0%", 8.0], ["赵静", "7.2%", 7.2], ["李岚", "6.6%", 6.6], ["张晓亮", "5.8%", 5.8], ["钟鑫武", "2.9%", 2.9], ["刘峰", "2.8%", 2.8], ["廖文玲", "2.8%", 2.8]]}, "qc": [["赣州大区", "97.48%", 97.48], ["南昌大区", "95.72%", 95.72], ["上饶大区", "98.21%", 98.21], ["宜春大区", "97.98%", 97.98]], "ringInvalid": [["锁门/临时关门", 1023, "57.57%"], ["倒闭/停业", 324, "18.23%"], ["客户拒访，未采集", 159, "8.95%"], ["根据地址找不到客户/拆迁", 74, "4.16%"], ["特殊场所（学校/部队等）无法进入", 72, "4.05%"], ["门店装修", 68, "3.83%"], ["其他原因", 47, "2.64%"], ["季节性不售卖饮料", 6, "0.34%"], ["转行或不销售饮料产品", 4, "0.23%"]], "ringNcErrors": [["部分采集无合理缘由", 87, "53.37%"], ["协议类错误", 28, "17.18%"], ["漏拍类", 27, "16.56%"], ["冰柜/冰箱相关", 13, "7.98%"], ["其他", 5, "3.07%"], ["货架/货道相关", 2, "1.23%"], ["拍错模块", 1, "0.61%"]]}</script>
+
+<script>
+function toggleChart(id){var el=document.getElementById(id);if(el)el.classList.toggle("show")}
+function switchTab(id){document.querySelectorAll(".tab-panel").forEach(p=>p.classList.remove("active"));document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));document.getElementById(id).classList.add("active");event.target.classList.add("active")}
+document.addEventListener("DOMContentLoaded",function(){
+var C=["#2563eb","#059669","#d97706","#dc2626","#8b5cf6","#ec4899","#14b8a6","#f97316","#6366f1"];
+var d=JSON.parse(document.getElementById("chart-data").textContent);
+
+function makeBar(elId,data){
+  var el=document.getElementById(elId);if(!el)return;
+  var mx=Math.max.apply(null,data.map(function(x){return x[2]}));
+  var h="";
+  data.forEach(function(r){
+    var p=r[2]/mx*80+5;
+    var cc=r[2]>=15?"#dc2626":r[2]>=10?"#d97706":r[2]>=7?"#f97316":"#2563eb";
+    h+='<div class="bar-row"><span class="bar-label">'+r[0]+'</span><div class="bar-track"><div class="bar-fill" style="width:'+p.toFixed(1)+'%;background:'+cc+'" title="'+r[1]+'">'+r[1]+'</div></div><span class="bar-val">'+r[1]+'</span></div>';
+  });
+  el.innerHTML=h;
+}
+
+function ring(elId,data){
+  var el=document.getElementById(elId);if(!el)return;
+  var total=data.reduce(function(s,r){return s+r[1]},0);
+  if(total===0)return;
+  var p="",cum=0;
+  data.forEach(function(row,i){
+    var ang=row[1]/total*360;
+    var s=cum,e=cum+ang;
+    var sr=(s-90)*Math.PI/180,er=(e-90)*Math.PI/180;
+    p+='<path d="M120,120 L'+(120+90*Math.cos(sr)).toFixed(1)+','+(120+90*Math.sin(sr)).toFixed(1)+' A90,90 0 '+(ang>180?1:0)+',1 '+(120+90*Math.cos(er)).toFixed(1)+','+(120+90*Math.sin(er)).toFixed(1)+'" fill="'+C[i%9]+'"/>';
+    cum=e;
+  });
+  var l="";
+  data.forEach(function(row,i){l+='<div><span class="dot" style="background:'+C[i%9]+'"></span>'+row[0]+' ('+row[2]+')</div>'});
+  el.innerHTML='<svg class="ring-svg" width="240" height="240">'+p+'<text x="120" y="125" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">'+total+'</text><text x="120" y="142" text-anchor="middle" font-size="11" fill="#64748b">合计</text></svg><div class="ring-legend">'+l+'</div>';
+}
+
+// === SIDE-BY-SIDE COMPARISON BARS ===
+function makeCompareBars(elId, data, unit){
+  // data = [[label, p5val, p6val, diff], ...]  sorted by diff
+  // unit = "%" or empty for counts
+  var el = document.getElementById(elId); if(!el) return;
+  var allVals = []; data.forEach(function(r){ allVals.push(r[1]); allVals.push(r[2]); });
+  var mx = Math.max.apply(null, allVals);
+  var h = "";
+  data.forEach(function(r){
+    var p5w = r[1]/mx*100, p6w = r[2]/mx*100;
+    var ds = r[3]>=0 ? "\u2193"+Math.abs(r[3]).toFixed(1)+unit : "\u2191"+Math.abs(r[3]).toFixed(1)+unit;
+    var dc = r[3]>=0 ? "improve" : "worse";
+    h+='<div class="cmp-row-v2">'
+      +'<span class="cmp-label">'+r[0]+'</span>'
+      +'<div class="cmp-pair">'
+      +'<div class="cmp-bar-wrap">'
+        +'<span class="cmp-bar-tag p5">P5</span>'
+        +'<div class="cmp-bar-bg">'
+          +'<div class="cmp-bar-fill p5" style="width:'+p5w.toFixed(1)+'%">'+r[1].toFixed(1)+unit+'</div>'
+        +'</div>'
+      +'</div>'
+      +'<div class="cmp-bar-wrap">'
+        +'<span class="cmp-bar-tag p6">P6</span>'
+        +'<div class="cmp-bar-bg">'
+          +'<div class="cmp-bar-fill p6" style="width:'+p6w.toFixed(1)+'%">'+r[2].toFixed(1)+unit+'</div>'
+        +'</div>'
+      +'</div>'
+      +'</div>'
+      +'<span class="cmp-delta-cell '+dc+'">'+ds+'</span>'
+      +'</div>';
+  });
+  el.innerHTML = h;
+}
+
+// Also: reason comparison bars (counts, not rate)
+function makeReasonBars(elId, data){
+  var el = document.getElementById(elId); if(!el) return;
+  var allVals = []; data.forEach(function(r){ allVals.push(r[1]); allVals.push(r[2]); });
+  var mx = Math.max.apply(null, allVals);
+  var h = "";
+  data.forEach(function(r){
+    var p5w = r[1]/mx*100, p6w = r[2]/mx*100;
+    h+='<div class="cmp-row-v2">'
+      +'<span class="cmp-label">'+r[0]+'</span>'
+      +'<div class="cmp-pair">'
+      +'<div class="cmp-bar-wrap">'
+        +'<span class="cmp-bar-tag p5">P5</span>'
+        +'<div class="cmp-bar-bg">'
+          +'<div class="cmp-bar-fill p5" style="width:'+p5w.toFixed(1)+'%">'+r[1]+'</div>'
+        +'</div>'
+      +'</div>'
+      +'<div class="cmp-bar-wrap">'
+        +'<span class="cmp-bar-tag p6">P6</span>'
+        +'<div class="cmp-bar-bg">'
+          +'<div class="cmp-bar-fill p6" style="width:'+p6w.toFixed(1)+'%">'+r[2]+'</div>'
+        +'</div>'
+      +'</div>'
+      +'</div>'
+      +'<span class="cmp-delta-cell">P5\u2192P6</span>'
+      +'</div>';
+  });
+  el.innerHTML = h;
+}
+
+// Completion bars
+makeBar("bar-completion",d.completion);
+
+// Daily bars
+var days=d.daily;
+var de=document.getElementById("daily-bars");
+if(de){
+  var dmx=Math.max.apply(null,days);
+  var dh="";
+  for(var i=0;i<30;i++){
+    var v=days[i];
+    var p=v/dmx*80+5;
+    var cc=v>=900?"#2563eb":v>=600?"#3b82f6":"#94a3b8";
+    dh+='<div class="bar-row"><span class="bar-label">6月'+(i+1)+'日</span><div class="bar-track"><div class="bar-fill" style="width:'+p.toFixed(1)+'%;background:'+cc+'" title="'+v+'">'+v+'</div></div><span class="bar-val">'+v+'</span></div>';
+  }
+  de.innerHTML=dh;
+}
+
+// Side-by-side waterfall comparison
+makeCompareBars("waterfall-bars", d.waterfall, "pt");
+
+// Side-by-side reason comparison
+makeReasonBars("reason-cmp-bars", d.reason);
+
+// Region inspector bars
+["NC","GZ","SR","YC"].forEach(function(rk){makeBar("bar-"+rk,d.inspectors[rk])});
+
+// QC bars
+makeBar("bar-qc-region",d.qc);
+
+// Rings
+ring("ring-invalid-reason",d.ringInvalid);
+ring("ring-nc-errors",d.ringNcErrors);
+
+});
+</script>
+</body>
+</html>
